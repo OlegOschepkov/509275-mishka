@@ -1,7 +1,7 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Олег Ощепков](https://up.htmlacademy.ru/adaptive/14/user/509275).
-* Наставник: `Неизвестно`.
+* Наставник: [Андрей Чепулис](https://htmlacademy.ru/profile/id240237).
 
 ---
 
