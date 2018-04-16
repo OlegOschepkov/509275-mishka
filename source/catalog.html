@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Мишка</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+
+  <body>
+
+    <header class="header">
+      <div class="container">
+        <img class="header__logo" src="img/logo-mobile.svg" width="86" height="35" alt="Мишка-магазин милых штук для дома">
+        <nav class="header__nav">
+          <button class="header__icon"></button>
+          <ul class="header__submenu">
+            <li class="header__item">
+              <a href="">Каталог товаров</a>
+            </li>
+            <li class="header__item">
+              <a href="">Вязание на заказ</a>
+            </li>
+            <li class="header__item icon-search">
+              <a href="">Поиск по сайту</a>
+            </li>
+            <li class="header__item icon-cart">
+              <a href="">Корзина: пока пуста</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+
+      <section class="catalog">
+        <div class="wide-container">
+          <h3 class="page-title catalog__title">Каталог товаров</h3>
+        </div>
+        <div class="container">
+          <ul class="catalog__list">
+            <li class="catalog__item">
+              <a href="" class="catalog__item-link"><img class="catalog__img" src="" alt="1" width="260" height="195"></a>
+              <a href="" class="catalog__item-link">
+                <h4 class="catalog__item-name">Зайчик-попрыгайчик</h4>
+              </a>
+              <p class="catalog__item-description">Рост 30 см, вес 200 г</p>
+              <p class="catalog__item-price">1 200 руб.</p>
+              <div class="catalog__add-to-cart"></div>
+            </li>
+            <li class="catalog__item">
+              <a href="" class="catalog__item-link"><img class="catalog__img" src="" alt="1" width="260" height="195"></a>
+              <a href="" class="catalog__item-link">
+                <h4 class="catalog__item-name">Корзинка для белья</h4>
+              </a>
+              <p class="catalog__item-description">Диаметр 15 см, высота 10 см</p>
+              <p class="catalog__item-price">690 руб.</p>
+              <div class="catalog__add-to-cart"></div>
+            </li>
+            <li class="catalog__item">
+              <a href="" class="catalog__item-link"><img class="catalog__img" src="" alt="1" width="260" height="195"></a>
+              <a href="" class="catalog__item-link">
+                <h4 class="catalog__item-name">Большая корзинка для игрушек</h4>
+              </a>
+              <p class="catalog__item-description">Диаметр 30 см, высота 30 см</p>
+              <p class="catalog__item-price">1 500 руб.</p>
+              <div class="catalog__add-to-cart"></div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="production">
+        <div class="container">
+          <h3 class="production__title">Процесс производства</h3>
+          <video class="production__video" src="" type="" poster="" width="260" height="150"></video>
+          <p class="production__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+          <button class="btn">Сделать заказ</button>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="footer">
+      <div class="wide-container">
+        <div class="footer__social">
+          <h3 class="visually-hidden">Посетите на наши страницы на:</h3>
+          <a class="instagram" href="https://instagram.com/htmlacademy">
+            <span class="visually-hidden" lang="en">Instagram</span></a>
+          <a class="facebook" href="https://facebook.com/htmlacademy">
+            <span class="visually-hidden" lang="en">Facebook</span></a>
+          <a class="twitter" href="https://twitter.com/htmlacademy">
+            <span class="visually-hidden" lang="en">Twitter</span></a>
+        </div>
+        <p class="footer__copyright">Разработано</p>
+        <a class="footer__intensive" href="https://htmlacademy.ru/intensive/adaptive">
+          <span class="visually-hidden">
+            Профессиональный
+            <b>"
+              <span lang="en">HTML</span>
+              и
+              <span lang="en">CSS</span>, уровень 2"</b>
+            на сайте
+            <span lang="en">HTML Academy</span></span>
+        </a>
+      </div>
+    </footer>
+
+    <section class="modal">
+      <div class="wide-container">
+        <div class="container">
+          <h2 class="modal__title">Добавить в корзину</h2>
+          <p class="modal__description">Выберите размер:</p>
+          <button class="modal_size">S</button>
+          <button class="modal_size">M</button>
+          <button class="modal_size">L</button>
+          <button class="modal_to-cart">Добавить</button>
+        </div>
+      </div>
+    </section>
+
+  </body>
+
+</html>
