@@ -14,18 +14,18 @@
       <div class="container">
         <img class="header__logo" src="http://placehold.it/86x35" width="86" height="35" alt="Мишка-магазин милых штук для дома">
         <nav class="header__nav">
-          <button class="header__icon"></button>
-          <ul class="header__submenu">
+          <button class="header__toggle"></button>
+          <ul class="header__list">
             <li class="header__item">
               <a href="">Каталог товаров</a>
             </li>
             <li class="header__item">
               <a href="">Вязание на заказ</a>
             </li>
-            <li class="header__item icon-search">
+            <li class="header__item header__item--search">
               <a href="">Поиск по сайту</a>
             </li>
-            <li class="header__item icon-cart">
+            <li class="header__item header__item--cart">
               <a href="">Корзина: пока пуста</a>
             </li>
           </ul>
@@ -36,52 +36,50 @@
     <main>
 
       <section class="order">
-        <div class="wide-container">
-          <h3 class="page-title order__title">Каталог товаров</h3>
-        </div>
+        <h3 class="order__title">Каталог товаров</h3>
         <div class="container">
           <p class="order__description">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
           <form class="order__form" action="https://echo.htmlacademy.ru">
-            <fieldset class="order-fieldset order__type">
-              <legend class="order-legend order__type-legend">Тип</legend>
+            <fieldset class="order__type">
+              <legend class="order__type-legend">Тип</legend>
               <div>
-                <input class="order__type-radio" type="radio" id="order__interior" name="order__item-type" checked="checked">
-                <label class="order__label" for="order__interior">Аксессуар для интерьера</label>
+                <input class="order__type-radio visually-hidden" type="radio" id="order-interior" name="order-item-type" checked="checked">
+                <label class="order__label" for="order-interior">Аксессуар для интерьера</label>
               </div>
               <div>
-                <input class="order__type-radio" type="radio" id="order__toy" name="order__item-type">
-                <label class="order__label" for="order__toy">Детская игрушка</label>
+                <input class="order__type-radio visually-hidden" type="radio" id="order-toy" name="order-item-type">
+                <label class="order__label" for="order-toy">Детская игрушка</label>
               </div>
             </fieldset>
-            <fieldset class="order-fieldset order__color">
-              <legend class="order-legend order__color-legend">Цвет</legend>
+            <fieldset class="order__color">
+              <legend class="order__color-legend">Цвет</legend>
               <div>
-                <input class="order__item-color" type="checkbox" id="white" name="item-color" checked="checked">
+                <input class="order__item-color visually-hidden" type="checkbox" id="white" name="item-color" checked="checked">
                 <label class="order__label" for="white">Белый</label>
               </div>
               <div>
-                <input class="order__item-color" type="checkbox" id="grey" name="item-color" checked="checked">
+                <input class="order__item-color visually-hidden" type="checkbox" id="grey" name="item-color" checked="checked">
                 <label class="order__label" for="grey">Серый</label>
               </div>
               <div>
-                <input class="order__item-color" type="checkbox" id="tiffany" name="item-color">
+                <input class="order__item-color visually-hidden" type="checkbox" id="tiffany" name="item-color">
                 <label class="order__label" for="tiffany">"Тиффани"</label>
               </div>
               <div>
-                <input class="order__item-color" type="checkbox" id="black" name="item-color">
+                <input class="order__item-color visually-hidden" type="checkbox" id="black" name="item-color">
                 <label class="order__label" for="black">Черный</label>
               </div>
               <div>
-                <input class="order__item-color" type="checkbox" id="pink" name="item-color">
+                <input class="order__item-color visually-hidden" type="checkbox" id="pink" name="item-color">
                 <label class="order__label" for="pink">Розовый</label>
               </div>
               <div>
-                <input class="order__item-color" type="checkbox" id="orange" name="item-color">
+                <input class="order__item-color visually-hidden" type="checkbox" id="orange" name="item-color">
                 <label class="order__label" for="orange">Оранжевый</label>
               </div>
             </fieldset>
-            <fieldset class="order-fieldset order__customer-name">
-              <legend class="order-legend order__customer-name-legend">ФИО</legend>
+            <fieldset class="order__customer-name">
+              <legend class="order__customer-name-legend">ФИО</legend>
               <div>
                 <label class="order__label" for="customer-1st-name">Имя:</label>
                 <input class="order__customer" type="text" id="customer-1st-name" name="customer-name" placeholder="Введите ваше имя*">
@@ -95,55 +93,58 @@
                 <input class="order__customer" type="text" id="customer-sur-name" name="customer-name" placeholder="Отчество, если желаете">
               </div>
             </fieldset>
-            <fieldset class="order-fieldset order__phone">
-              <legend class="order-legend order_phone-legend">Тел</legend>
+            <fieldset class="order__phone">
+              <legend class="order__phone-legend">Тел</legend>
               <div>
-                <input class="order__customer icon-phone" type="tel" id="phone" name="order__phone" placeholder="7 ХХХ ХХ ХХ*">
+                <input class="order__customer order__customer--phone" type="tel" id="phone" name="order-phone" placeholder="7 ХХХ ХХ ХХ*">
                 <label class="order__label visually-hidden" for="phone"></label>
               </div>
             </fieldset>
-            <fieldset class="order-fieldset order__email">
-              <legend class="order-legend order__email-legend">E-mail</legend>
+            <fieldset class="order__email">
+              <legend class="order__email-legend">E-mail</legend>
               <div>
-                <input class="order__customer icon-email" type="email" id="email" name="order__email" placeholder="Ваш Email*">
+                <input class="order__customer order__customer--email" type="email" id="email" name="order-email" placeholder="Ваш Email*">
                 <label class="order__label visually-hidden" for="email"></label>
               </div>
             </fieldset>
-            <fieldset class="order-fieldset order__text">
-              <legend class="order-legend order__text-legend">Доп</legend>
+            <fieldset class="order__text">
+              <legend class="order__text-legend">Доп</legend>
               <div>
-                <textarea class="order__customer" name="order__textarea" id="textarea" cols="30" rows="10" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+                <textarea class="order__customer" name="order-textarea" id="textarea" cols="15" rows="7" placeholder="Опишите все ваши пожелания к заказу"></textarea>
                 <label class="order__label visually-hidden" for="textarea"></label>
               </div>
             </fieldset>
           </form>
-          <p class="order_vital">*Поля обязательны для заполнения</p>
+          <p class="order__vital">*Поля обязательны для заполнения</p>
           <button class="btn">ОТПРАВИТЬ ЗАКАЗ</button>
         </div>
       </section>
     </main>
 
     <footer class="footer">
-      <div class="wide-container">
-        <div class="footer__social">
-          <h3 class="visually-hidden">Посетите на наши страницы на:</h3>
-          <a class="instagram" href="https://instagram.com/htmlacademy">
-            <span class="visually-hidden" lang="en">Instagram</span></a>
-          <a class="facebook" href="https://facebook.com/htmlacademy">
-            <span class="visually-hidden" lang="en">Facebook</span></a>
-          <a class="twitter" href="https://twitter.com/htmlacademy">
-            <span class="visually-hidden" lang="en">Twitter</span></a>
-        </div>
-        <p class="footer__copyright">Разработано</p>
-        <a class="footer__intensive" href="https://htmlacademy.ru/intensive/adaptive">
-          <span class="visually-hidden">
-            Профессиональный
-            <b>"
-              <span lang="en">HTML</span>
-              и
-              <span lang="en">CSS</span>, уровень 2"</b>
-            на сайте
-            <span lang="en">HTML Academy</span></span>
+      <div class="footer__social social">
+        <h3 class="visually-hidden">Посетите на наши страницы на:</h3>
+        <ul class="social__list">
+          <li class="social__item">
+            <a class="social__link social__link--instagram" href="https://instagram.com/htmlacademy">
+              <span class="visually-hidden" lang="en">Instagram</span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--facebook" href="https://facebook.com/htmlacademy">
+              <span class="visually-hidden" lang="en">Facebook</span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--twitter" href="https://twitter.com/htmlacademy">
+              <span class="visually-hidden" lang="en">Twitter</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__copyright">Разработано
+        <a class="footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">
+          <span class="visually-hidden">"Профессиональный HTML и CSS, уровень 2" на сайте HTML Academy</span>
         </a>
       </div>
     </footer>

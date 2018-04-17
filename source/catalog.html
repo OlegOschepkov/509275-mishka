@@ -14,18 +14,18 @@
       <div class="container">
         <img class="header__logo" src="http://placehold.it/86x35" width="86" height="35" alt="Мишка-магазин милых штук для дома">
         <nav class="header__nav">
-          <button class="header__icon"></button>
-          <ul class="header__submenu">
+          <button class="header__toggle"></button>
+          <ul class="header__list">
             <li class="header__item">
               <a href="">Каталог товаров</a>
             </li>
             <li class="header__item">
               <a href="">Вязание на заказ</a>
             </li>
-            <li class="header__item icon-search">
+            <li class="header__item header__item--search">
               <a href="">Поиск по сайту</a>
             </li>
-            <li class="header__item icon-cart">
+            <li class="header__item header__item--cart">
               <a href="">Корзина: пока пуста</a>
             </li>
           </ul>
@@ -36,13 +36,13 @@
     <main>
 
       <section class="catalog">
-        <div class="wide-container">
-          <h3 class="page-title catalog__title">Каталог товаров</h3>
-        </div>
+        <h3 class="catalog__title">Каталог товаров</h3>
         <div class="container">
           <ul class="catalog__list">
             <li class="catalog__item">
-              <a href="" class="catalog__item-link"><img class="catalog__img" src="http://placehold.it/260x195" alt=" Фото - Зайчик-попрыгайчик" width="260" height="195"></a>
+              <a href="" class="catalog__item-link">
+                <img class="catalog__img" src="http://placehold.it/260x195" alt=" Фото - Зайчик-попрыгайчик" width="260" height="195">
+              </a>
               <a href="" class="catalog__item-link">
                 <h4 class="catalog__item-name">Зайчик-попрыгайчик</h4>
               </a>
@@ -51,7 +51,9 @@
               <div class="catalog__add-to-cart"></div>
             </li>
             <li class="catalog__item">
-              <a href="" class="catalog__item-link"><img class="catalog__img" src="http://placehold.it/260x195" alt="Фото - Корзинка для белья" width="260" height="195"></a>
+              <a href="" class="catalog__item-link">
+                <img class="catalog__img" src="http://placehold.it/260x195" alt="Фото - Корзинка для белья" width="260" height="195">
+              </a>
               <a href="" class="catalog__item-link">
                 <h4 class="catalog__item-name">Корзинка для белья</h4>
               </a>
@@ -60,7 +62,9 @@
               <div class="catalog__add-to-cart"></div>
             </li>
             <li class="catalog__item">
-              <a href="" class="catalog__item-link"><img class="catalog__img" src="http://placehold.it/260x195" alt="Фото - Большая корзинка для игрушек" width="260" height="195"></a>
+              <a href="" class="catalog__item-link">
+                <img class="catalog__img" src="http://placehold.it/260x195" alt="Фото - Большая корзинка для игрушек" width="260" height="195">
+              </a>
               <a href="" class="catalog__item-link">
                 <h4 class="catalog__item-name">Большая корзинка для игрушек</h4>
               </a>
@@ -75,7 +79,7 @@
       <section class="production">
         <div class="container">
           <h3 class="production__title">Процесс производства</h3>
-          <video class="production__video" src="http://placehold.it/260x150" type="" poster="" width="260" height="150"></video>
+          <video class="production__video" src="http://placehold.it/260x150" poster="" width="260" height="150"></video>
           <p class="production__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
           <button class="btn">Сделать заказ</button>
         </div>
@@ -84,41 +88,40 @@
     </main>
 
     <footer class="footer">
-      <div class="wide-container">
-        <div class="footer__social">
-          <h3 class="visually-hidden">Посетите на наши страницы на:</h3>
-          <a class="instagram" href="https://instagram.com/htmlacademy">
-            <span class="visually-hidden" lang="en">Instagram</span></a>
-          <a class="facebook" href="https://facebook.com/htmlacademy">
-            <span class="visually-hidden" lang="en">Facebook</span></a>
-          <a class="twitter" href="https://twitter.com/htmlacademy">
-            <span class="visually-hidden" lang="en">Twitter</span></a>
-        </div>
-        <p class="footer__copyright">Разработано</p>
-        <a class="footer__intensive" href="https://htmlacademy.ru/intensive/adaptive">
-          <span class="visually-hidden">
-            Профессиональный
-            <b>"
-              <span lang="en">HTML</span>
-              и
-              <span lang="en">CSS</span>, уровень 2"</b>
-            на сайте
-            <span lang="en">HTML Academy</span></span>
+      <div class="footer__social social">
+        <h3 class="visually-hidden">Посетите на наши страницы на:</h3>
+        <ul class="social__list">
+          <li class="social__item">
+            <a class="social__link social__link--instagram" href="https://instagram.com/htmlacademy">
+              <span class="visually-hidden" lang="en">Instagram</span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--facebook" href="https://facebook.com/htmlacademy">
+              <span class="visually-hidden" lang="en">Facebook</span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--twitter" href="https://twitter.com/htmlacademy">
+              <span class="visually-hidden" lang="en">Twitter</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__copyright">Разработано
+        <a class="footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">
+          <span class="visually-hidden">"Профессиональный HTML и CSS, уровень 2" на сайте HTML Academy</span>
         </a>
       </div>
     </footer>
 
     <section class="modal">
-      <div class="wide-container">
-        <div class="container">
-          <h2 class="modal__title">Добавить в корзину</h2>
-          <p class="modal__description">Выберите размер:</p>
-          <button class="modal_size">S</button>
-          <button class="modal_size">M</button>
-          <button class="modal_size">L</button>
-          <button class="modal_to-cart">Добавить</button>
-        </div>
-      </div>
+      <h2 class="modal__title">Добавить в корзину</h2>
+      <p class="modal__description">Выберите размер:</p>
+      <button class="modal__size">S</button>
+      <button class="modal__size">M</button>
+      <button class="modal__size">L</button>
+      <button class="btn">Добавить</button>
     </section>
 
   </body>
