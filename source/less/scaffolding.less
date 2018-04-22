@@ -1,0 +1,49 @@
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+
+.container {
+  padding-left: 30px;
+  padding-right: 30px;
+
+  &--borders {
+    border-top: 1px solid @grey;
+    border-bottom: 1px solid @grey;
+    padding-bottom: 30px;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.btn {
+  .font(17, 700, 20);
+  width: 258px;
+  height: 48px;
+  background-color: white;
+  border: 2px solid @grey;
+
+  &--teal {
+    background-color: @teal;
+  }
+}
+
+.wrapper {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
