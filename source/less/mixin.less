@@ -1,0 +1,16 @@
+.font (@size, @weight, @height) {
+  font-family: @font;
+  font-size: ~"@{size}px";
+  font-weight: @weight;
+  line-height: ~"@{height}px";
+}
+
+.square(@value) {
+  height: @value;
+  width: @value;
+}
+
+.background(@value1: center, @value2: center) {
+  background-position: @value1 @value2;
+  background-repeat: no-repeat;
+}

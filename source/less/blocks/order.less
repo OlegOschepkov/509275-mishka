@@ -1,0 +1,119 @@
+.order {
+  padding-bottom: 55px;
+}
+
+.order__form-block {
+  padding: 0;
+  margin: 0;
+  border: none;
+  border-top: 1px solid @teal;
+  padding-top: 30px;
+}
+
+.order__legend {
+  display: block;
+  padding: 0;
+  margin: 0;
+  color: @teal;
+  .font(17, 700, 16);
+  padding-right: 20px;
+}
+
+.order__title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .font(27, 700, 30);
+  background-color: @lightgrey;
+  height: 175px;
+  padding: 0;
+  margin: 0;
+  padding-bottom: 25px;
+}
+
+.order__description {
+  .font(13, 400, 24);
+  padding-bottom: 30px;
+}
+
+.order__label {
+  display: block;
+  position: relative;
+  height: 40px;
+  width: 160px;
+  .font(17, 700, 18);
+  margin-bottom: 20px;
+  padding-left: 50px;
+
+  &--type::before {
+    display: block;
+    position: absolute;
+    content: "";
+    .square(40px);
+    border: 1px solid @grey;
+    border-radius: 50%;
+    left: 0;
+  }
+
+  &--color::before {
+    display: block;
+    position: absolute;
+    content: "";
+    .square(40px);
+    border: 1px solid @grey;
+    left: 0;
+  }
+}
+
+.order__type-radio:checked + .order-label--type::after {
+  display: block;
+  position: absolute;
+  content: "";
+  .square(8px);
+  background-color: @teal;
+  border-radius: 50%;
+  left: 0;
+}
+
+.order__customer-label {
+  display: block;
+  height: 40px;
+  width: 160px;
+  .font(17, 700, 18);
+}
+
+.order__customer {
+  display: block;
+  min-height: 30px;
+  width: 260px;
+  .font(17, 400, 18);
+  border: none;
+  margin-bottom: 25px;
+  border-bottom: 2px solid @black;
+
+  &--phone {
+    background-image: url("../img/icon-phone.svg");
+    .background(right, center);
+  }
+
+  &--email {
+    background-image: url("../img/icon-mail.svg");
+    .background(right, center);
+  }
+}
+
+.order__customer-textarea {
+  display: block;
+  width: 230px;
+  .font(17, 400, 18);
+  padding: 15px;
+  margin-bottom: 25px;
+  border: 2px solid @black;
+}
+
+.order__vital {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 35px;
+  .font(14, 400, 16);
+}

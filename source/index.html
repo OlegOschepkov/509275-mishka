@@ -4,47 +4,47 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
-    <link href="https://fonts.googleapis.com/css?family=OpenSans:400,700&amp;subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
   </head>
 
   <body>
 
     <header class="header">
-      <div class="container">
-        <img class="header__logo" src="http://placehold.it/86x35" width="86" height="35" alt="Мишка-магазин милых штук для дома">
-        <nav class="header__nav">
-          <button class="header__toggle"></button>
-          <ul class="header__list">
-            <li class="header__item">
-              <a href="">Каталог товаров</a>
-            </li>
-            <li class="header__item">
-              <a href="">Вязание на заказ</a>
-            </li>
-            <li class="header__item header__item--search">
-              <a href="">Поиск по сайту</a>
-            </li>
-            <li class="header__item header__item--cart">
-              <a href="">Корзина: пока пуста</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
+      <img class="header__logo" src="img/logo-mobile.svg" width="86" height="35" alt="Мишка-магазин милых штук для дома">
+      <button class="header__toggle"><img src="img/menu.png" width="20" height="14" alt="Меню сайта"></button>
+      <nav class="header__nav">
+        <ul class="header__list">
+          <li class="header__item">
+            <a class="header__link" href="catalog.html">Каталог товаров</a>
+          </li>
+          <li class="header__item">
+            <a class="header__link" href="form.html">Вязание на заказ</a>
+          </li>
+          <li class="header__item header__item--search">
+            <a class="header__link" href="">Поиск по сайту</a>
+          </li>
+          <li class="header__item header__item--cart">
+            <a class="header__link" href="">Корзина: пока пуста</a>
+          </li>
+        </ul>
+      </nav>
     </header>
 
     <main>
 
       <section class="promo">
-        <h3 class="promo__title">Милые штуки ручной работы для дома</h3>
-        <a class="promo__link promo__link--lamp" href="">Предметы интерьера</a>
-        <a class="promo__link promo__link--cube" href="">Детские игрушки</a>
+        <h3 class="promo__title">
+          <p class="promo__title-text">Милые штуки ручной<br>работы для дома</p></h3>
+        <a class="promo__link promo__link--lamp" href="">
+          <span class="promo__link-text">Предметы интерьера</span></a>
+        <a class="promo__link promo__link--dark promo__link--cube" href="">
+          <span class="promo__link-text">Детские игрушки</span></a>
       </section>
 
       <section class="hot-items">
         <div class="container">
           <h3 class="hot-items__title">Вязаные корзинки</h3>
-          <a class="hot-items__link">Товар недели</a>
+          <a class="hot-items__link" href="#">Товар недели</a>
           <p class="hot-items__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
           <table class="hot-items__table">
             <tr class="hot-items__row">
@@ -60,7 +60,8 @@
               <td class="hot-items__cell hot-items__cell--right">15 см</td>
             </tr>
           </table>
-          <img class="hot-items__photo" src="http://placehold.it/260x315" width="260" height="315" alt="Фото вязаных корзинок">
+          <img class="hot-items__photo" src="img/triple-set-mobile@1x.jpg" width="260" height="315" alt="Фото вязаных корзинок">
+          <p class="hot-items__price">Цена: 990 руб.</p>
           <button class="btn">Заказать</button>
         </div>
       </section>
@@ -69,12 +70,18 @@
         <div class="container">
           <h3 class="advantages__title">Коротко о нас:</h3>
           <ul class="advantages__list">
-            <li class="advantages__item advantages__item--flower">Экологически чистые материалы</li>
-            <li class="advantages__item advantages__item--banknote">Скандинавский стиль по российской цене</li>
-            <li class="advantages__item advantages__item--heart">Увеличивает лайки на фотографиях</li>
-            <li class="advantages__item advantages__item--coil">Связано вручную с любовью и умилением</li>
-            <li class="advantages__item advantages__item--rocket">Поддержка отечественного производителя</li>
-            <li class="advantages__item advantages__item--box">Поставляется в подарочной упаковке</li>
+            <li class="advantages__item">
+              <div class="advantages__item--flower"></div>Экологически чистые материалы</li>
+            <li class="advantages__item">
+              <div class="advantages__item--banknote"></div>Скандинавский стиль по российской цене</li>
+            <li class="advantages__item">
+              <div class="advantages__item--heart"></div>Увеличивает лайки на фотографиях</li>
+            <li class="advantages__item">
+              <div class="advantages__item--coil"></div>Связано вручную с любовью и умилением</li>
+            <li class="advantages__item">
+              <div class="advantages__item--rocket"></div>Поддержка отечественного производителя</li>
+            <li class="advantages__item">
+              <div class="advantages__item--box"></div>Поставляется в подарочной упаковке</li>
           </ul>
         </div>
       </section>
@@ -106,18 +113,20 @@
           <table class="contacts__table">
             <tr class="contacts__row">
               <td class="contacts__cell contacts__cell--left">e-mail:</td>
-              <td class="contacts__cell contacts__cell--right">info@mimimishkashop.ru</td>
+              <td class="contacts__cell contacts__cell--right contacts__cell--mail">info@mimimishkashop.ru</td>
             </tr>
-            <tr class="contacts__row">
+            <tr class="contacts__row contacts__row--second">
               <td class="contacts__cell contacts__cell--left">адрес:</td>
-              <td class="contacts__cell contacts__cell--right">
+              <td class="contacts__cell contacts__cell--right contacts__cell--adress">
                 г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101
               </td>
             </tr>
           </table>
         </div>
         <div class="contacts__map">
-          <img src="http://placehold.it/322x457" width="322" height="457" alt="г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101">
+          <img src="img/map-mobile@1x.jpg" width="322" height="457" alt="г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101">
+        </div>
+        <div class="container">
           <button class="btn">Напишите нам</button>
         </div>
       </section>
@@ -145,7 +154,8 @@
           </li>
         </ul>
       </div>
-      <div class="footer__copyright">Разработано
+      <div class="footer__copyright">
+        <span>Разработано</span>
         <a class="footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">
           <span class="visually-hidden">"Профессиональный HTML и CSS, уровень 2" на сайте HTML Academy</span>
         </a>
@@ -155,13 +165,21 @@
     <section class="modal">
       <h2 class="modal__title">Добавить в корзину</h2>
       <p class="modal__description">Выберите размер:</p>
-      <button class="modal__size">S</button>
-      <button class="modal__size">M</button>
-      <button class="modal__size">L</button>
-      <button class="btn">Добавить</button>
+      <div class="container">
+        <ul class="modal__sizes-list">
+          <li>
+            <button class="modal__size">S</button>
+          </li>
+          <li>
+            <button class="modal__size">M</button>
+          </li>
+          <li>
+            <button class="modal__size">L</button>
+          </li>
+        </ul>
+        <button class="btn btn--teal">Добавить</button>
+      </div>
     </section>
 
   </body>
-</html>
-
 </html>

@@ -1,0 +1,55 @@
+.contacts {
+  padding-top: 50px;
+  padding-bottom: 40px;
+}
+
+.contacts__title {
+  .font(18, 700, 30);
+}
+
+.contacts__row {
+  height: 30px;
+
+  &--second {
+    // padding-top: 40px;
+    height: 188px;
+    // vertical-align: top;
+  }
+}
+
+.contacts__cell {
+  .font(15, 400, 30);
+
+  &--left {
+    width: 75px;
+  }
+
+  &--right {
+    width: 185px;
+  }
+
+  &--mail {
+    border-bottom: 1px solid @teal;
+  }
+
+  &--adress {
+    padding-right: 45px;
+  }
+}
+
+.contacts__map {
+  position: relative;
+  margin-bottom: 40px;
+
+  &::before {
+    display: block;
+    position: absolute;
+    width: 67px;
+    height: 100px;
+    top: 110px;
+    left: 140px;
+    content: "";
+    background-image: url("../img/icon-map-pin.svg");
+    z-index: 1;
+  }
+}
