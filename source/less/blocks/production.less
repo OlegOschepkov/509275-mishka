@@ -27,3 +27,25 @@
   padding-top: 30px;
   padding-bottom: 30px;
 }
+
+@media (min-width: @tablet-width) {
+  .container--production {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .production__video {
+    order: -1;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .container--production {
+    margin-left: 700px;
+  }
+
+  .production__video {
+    position: absolute;
+    left: 100px;
+  }
+}

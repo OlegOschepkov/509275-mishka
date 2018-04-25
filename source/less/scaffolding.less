@@ -28,7 +28,7 @@ body {
 
 .btn {
   .font(17, 700, 20);
-  width: 258px;
+  width: 100%;
   height: 48px;
   background-color: white;
   border: 2px solid @grey;
@@ -42,4 +42,11 @@ body {
   content: "";
   display: table;
   clear: both;
+}
+
+@media (min-width: @tablet-width) {
+  .container {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
 }

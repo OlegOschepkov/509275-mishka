@@ -16,32 +16,55 @@
 }
 
 .promo__link {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   color: white;
   background-color: @teal;
   .font(19, 700, 24);
   text-decoration: none;
   height: 105px;
   min-width: 320px;
+  flex-grow: 1;
 
   &--dark {
     background-color: #56c3b2;
   }
 
-  &--lamp {
-    background-image: url("../img/icon-interior.svg");
-    .background(244px, center);
-  }
-
-  &--cube {
-    background-image: url("../img/icon-toy.svg");
-    .background(233px, center);
-  }
+  // &--lamp {
+  //   background-image: url("../img/icon-interior.svg");
+  //   .background(244px, center);
+  // }
+  //
+  // &--cube {
+  //   background-image: url("../img/icon-toy.svg");
+  //   .background(233px, center);
+  // }
 }
 
 .promo__link-text {
   display: block;
   width: 110px;
-  padding-left: 30px;
-  padding-top: 30px;
+  // padding-left: 30px;
+  // padding-top: 30px;
+}
+
+@media (min-width: @tablet-width) {
+  .promo__title {
+    background-image: url("../img/hero-desktop.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 1150px;
+    height: 746px;
+  }
+
+  .promo__title-text {
+    .font(43, 700, 53);
+    width: 720px;
+  }
+
+  .promo {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
