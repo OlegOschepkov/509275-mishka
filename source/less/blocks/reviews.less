@@ -52,3 +52,56 @@
   .background();
   border: 1px solid #ececec;
 }
+
+@media (min-width: @tablet-width) {
+  .reviews {
+    background-image: url("../img/review@1x.jpg");
+    .background(100px, center);
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  .reviews__text {
+    width: 680px;
+    .font(17, 400, 30);
+  }
+
+  .reviews__title {
+    order: -2;
+  }
+
+  .reviews__item {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .reviews__author {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+  .reviews__author-name {
+    width: 335px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .reviews {
+    background-image: none;
+
+    .container {
+      width: 785px;
+      padding-left: 175px;
+      background-image: url("../img/review@1x.jpg");
+      .background(left, center);
+    }
+  }
+}

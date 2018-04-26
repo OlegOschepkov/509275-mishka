@@ -56,3 +56,20 @@
   align-items: center;
   height: 70px;
 }
+
+@media (min-width: @tablet-width) {
+  .catalog__item {
+    display: flex;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .catalog__list {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .catalog__item {
+    flex-direction: column;
+  }
+}

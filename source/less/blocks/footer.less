@@ -51,3 +51,29 @@
   background-image: url("../img/logo-htmlacademy.svg");
   margin-left: 25px;
 }
+
+.footer__logo {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 50px;
+  }
+
+  .footer__logo {
+    display: block;
+  }
+
+  .footer__social {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .footer__copyright {
+    margin: 0;
+  }
+}

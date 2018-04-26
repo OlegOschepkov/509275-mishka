@@ -12,12 +12,8 @@
 .container {
   padding-left: 30px;
   padding-right: 30px;
-
-  &--borders {
-    border-top: 1px solid @grey;
-    border-bottom: 1px solid @grey;
-    padding-bottom: 30px;
-  }
+  margin: 0 auto;
+  width: 260px;
 }
 
 body {
@@ -28,7 +24,7 @@ body {
 
 .btn {
   .font(17, 700, 20);
-  width: 258px;
+  width: 100%;
   height: 48px;
   background-color: white;
   border: 2px solid @grey;
@@ -36,10 +32,78 @@ body {
   &--teal {
     background-color: @teal;
   }
+
+  &--reviews {
+    order: -1;
+  }
+
+  &--contacts {
+    width: 230px;
+  }
 }
 
 .clearfix::after {
   content: "";
   display: table;
   clear: both;
+}
+
+@media (min-width: @tablet-width) {
+  .container {
+    padding-left: 50px;
+    padding-right: 50px;
+    margin: 0 auto;
+    width: 668px;
+
+    &--order-bottom {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 50px;
+    }
+
+    &--expander {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      width: 510px;
+    }
+
+    &--customer {
+      flex-direction: column;
+      width: 100%;
+    }
+
+    &--production {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .btn--reviews {
+    width: 175px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .container {
+    padding-left: 100px;
+    padding-right: 100px;
+    margin: 0 auto;
+    width: 1050px;
+
+    &--expander {
+      width: 700px;
+    }
+
+    &--order-bottom {
+      padding: 0;
+      padding-left: 200px;
+      width: 700px;
+    }
+
+    &--production {
+      position: relative;
+      margin-left: 700px;
+    }
+  }
 }
