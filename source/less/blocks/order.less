@@ -2,11 +2,19 @@
   padding-bottom: 55px;
 }
 
+.order__form {
+  padding-left: 30px;
+}
+
 .order__form-block {
   margin: 0;
   border: none;
   border-top: 1px solid @teal;
-  padding: 30px;
+  padding: 30px 0;
+
+  .container {
+    padding: 0;
+  }
 }
 
 .order__legend {
@@ -115,6 +123,7 @@
   margin: 0;
   padding: 0;
   margin-bottom: 35px;
+  width: 260px;
   .font(14, 400, 16);
 }
 
@@ -124,57 +133,30 @@
     padding-right: 50px;
   }
 
+  .order__form {
+    padding: 0;
+  }
+
   .order__form-block {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    border: none;
-    padding-left: 50px;
-    padding-right: 50px;
-  }
+    // display: flex;
+    // flex-wrap: wrap;
+    // flex-direction: row;
+    // border: none;
+    // padding: 50px;
 
-  .order__legend {
-    margin-bottom: -150px;
-  }
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      width: 500px;
+    }
 
-  .container--labels {
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: 150px;
-  }
-
-  .order__form-block--grey {
-    background-color: @lightgrey;
-  }
-
-  .container--order-bottom {
-    display: flex;
-    justify-content: space-between;
-    padding: 0 50px;
+    &--grey {
+      background-color: @lightgrey;
+    }
   }
 
   .order__vital {
     order: 1;
-  }
-
-  .container--expander {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    width: 510px;
-  }
-
-  .container--customer {
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .order__customer--phone {
-    width: 100%;
-  }
-
-  .order__customer--email {
-    width: 100%;
   }
 
   .order__label--type {
@@ -183,6 +165,14 @@
 
   .order__customer {
     flex-grow: 1;
+
+    &--email {
+      width: 100%;
+    }
+
+    &--phone {
+      width: 100%;
+    }
   }
 
   .order__customer-textarea {
@@ -191,17 +181,13 @@
 }
 
 @media (min-width: @desktop-width) {
+  .order__form-block {
+    .container {
+      width: 780px;
+    }
+  }
+
   .order__label--color {
     width: 210px;
-  }
-
-  .container--expander {
-    width: 700px;
-  }
-
-  .container--order-bottom {
-    padding: 0;
-    padding-left: 200px;
-    width: 700px;
   }
 }

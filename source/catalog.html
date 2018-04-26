@@ -4,6 +4,9 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
 
@@ -40,7 +43,7 @@
           <li class="header__item header__item--search">
             <a class="header__link" href="">
               <img class="header__icon-search" src="img/icon-search.svg" height="30" wight="30">
-              <span class="header__link--mobile">Поиск по сайту</span>
+              <span class="header__link--search">Поиск по сайту</span>
             </a>
           </li>
           <li class="header__item header__item--cart">
@@ -49,16 +52,15 @@
           <li class="header__item header__item--delivery">
             <p>Бесплатная доставка по России</p>
           </li>
-          <li class="header__item header__item-desktop header__item-desktop--new">
+          <li class="header__item header__item--new">
             <p>Новые поступления</p>
           </li>
-          <li class="header__item header__item-desktop header__item-desktop--sale">
+          <li class="header__item header__item--sale">
             <p>Распродажа</p>
           </li>
         </ul>
       </nav>
     </header>
-
 
     <main>
 
@@ -72,7 +74,7 @@
               <a href="" class="catalog__item-link">
                 <img class="catalog__img" src="img/photo-hare-mobile@1x.jpg" alt=" Фото - Зайчик-попрыгайчик" width="260" height="195">
               </a>
-              <div class="container">
+              <div>
                 <a href="" class="catalog__item-link">
                   <h4 class="catalog__item-name">Зайчик-попрыгайчик</h4>
                 </a>
@@ -87,7 +89,7 @@
               <a href="" class="catalog__item-link">
                 <img class="catalog__img" src="img/photo-bowl-mobile@1x.jpg" alt="Фото - Корзинка для белья" width="260" height="195">
               </a>
-              <div class="container">
+              <div>
                 <a href="" class="catalog__item-link">
                   <h4 class="catalog__item-name">Корзинка для белья</h4>
                 </a>
@@ -102,7 +104,7 @@
               <a href="" class="catalog__item-link">
                 <img class="catalog__img" src="img/photo-toys-mobile@1x.jpg" alt="Фото - Большая корзинка для игрушек" width="260" height="195">
               </a>
-              <div class="container">
+              <div>
                 <a href="" class="catalog__item-link">
                   <h4 class="catalog__item-name">Большая корзинка для игрушек</h4>
                 </a>
@@ -119,12 +121,12 @@
 
       <section class="production">
         <div class="container">
-        <div class="container--production">
-          <h3 class="production__title">Процесс производства</h3>
-          <video class="production__video" src="" poster="img/video-mobile@1x.jpg" width="260" height="150"></video>
-          <p class="production__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
-          <button class="btn">Сделать заказ</button>
-        </div>
+          <div class="container--production"><!-- Решил оставить, так как container вложенный в container может еще где-то быть  -->
+            <h3 class="production__title">Процесс производства</h3>
+            <video class="production__video" src="" poster="img/video-mobile@1x.jpg" width="260" height="150"></video>
+            <p class="production__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+            <button class="btn">Сделать заказ</button>
+          </div>
         </div>
       </section>
 

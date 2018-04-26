@@ -1,9 +1,9 @@
 .promo__title {
   display: flex;
   justify-content: center;
-  width: 320px;
   height: 285px;
   background-image: url("../img/hero-mobile@1x.jpg");
+  background-color: #f9f9f9;
   .background();
   text-align: center;
 }
@@ -11,7 +11,7 @@
 .promo__title-text {
   color: black;
   .font(27, 700, 30);
-  width: 260px;
+  min-width: 260px;
   padding-top: 75px;
 }
 
@@ -24,37 +24,26 @@
   .font(19, 700, 24);
   text-decoration: none;
   height: 105px;
-  min-width: 320px;
   flex-grow: 1;
+  padding-left: 30px;
+  padding-right: 30px;
 
   &--dark {
     background-color: #56c3b2;
   }
-
-  // &--lamp {
-  //   background-image: url("../img/icon-interior.svg");
-  //   .background(244px, center);
-  // }
-  //
-  // &--cube {
-  //   background-image: url("../img/icon-toy.svg");
-  //   .background(233px, center);
-  // }
 }
 
 .promo__link-text {
   display: block;
   width: 110px;
-  // padding-left: 30px;
-  // padding-top: 30px;
 }
 
 @media (min-width: @tablet-width) {
   .promo__title {
     background-image: url("../img/hero-desktop.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 1150px;
+    .background();
+    background-color: #f9f9f9;
+    width: 1250px;
     height: 746px;
   }
 
@@ -66,5 +55,11 @@
   .promo {
     display: flex;
     flex-wrap: wrap;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .promo__title {
+    width: 100%;
   }
 }
