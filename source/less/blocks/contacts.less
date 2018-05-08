@@ -1,19 +1,22 @@
 .contacts {
-  padding-top: 50px;
+  padding-top: 37px;
   padding-bottom: 40px;
 }
 
 .contacts__title {
   .font(18, 700, 30);
+  margin: 0 9%;
+}
+
+.contacts__table {
+  margin: 0 9% 35px;
 }
 
 .contacts__row {
-  height: 30px;
+  height: 85px;
 
   &--second {
-    // padding-top: 40px;
-    height: 188px;
-    // vertical-align: top;
+    max-height: 188px;
   }
 }
 
@@ -21,35 +24,51 @@
   .font(15, 400, 30);
 
   &--left {
-    width: 75px;
+    width: 27%;
   }
 
   &--right {
-    width: 185px;
-  }
-
-  &--mail {
-    border-bottom: 1px solid @teal;
+    width: 73%;
   }
 
   &--adress {
-    padding-right: 45px;
+    padding-right: 40px;
+  }
+
+  &--second-left {
+    vertical-align: top;
+  }
+}
+
+.contacts__cell-mail {
+  color: black;
+  text-decoration: underline;
+  text-decoration-color: @teal;
+
+  &:hover {
+    color: @teal;
+  }
+
+  &:active {
+    color: @teal;
+    opacity: 0.3;
   }
 }
 
 .contacts__map {
   position: relative;
-  background-image: url("../img/map-mobile@1x.jpg");
+  // background-image: url("../img/map-mobile@1x.jpg");
   width: 320px;
   height: 457px;
   margin: 0 auto;
+  margin-bottom: 40px;
 
   &::before {
     display: block;
     position: absolute;
     width: 67px;
     height: 100px;
-    top: 110px;
+    top: 145px;
     left: 140px;
     content: "";
     background-image: url("../img/icon-map-pin.svg");
@@ -58,28 +77,71 @@
 }
 
 @media (min-width: @tablet-width) {
+  .contacts {
+    padding-bottom: 40px;
+  }
+
+  .contacts__title {
+    .font(43, 700, 50);
+    margin: 25px 6% 45px;
+  }
+
   .contacts__table {
-    display: flex;
-    flex-direction: row;
+    margin-left: 6%;
+    margin-bottom: 65px;
+
+    tbody {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+
+  .contacts__row {
+    width: 49%;
+
+    &--second {
+      margin-left: 2%;
+    }
+  }
+
+  .contacts__cell {
+    .font(17, 400, 30);
+
+    &--adress {
+      padding: 0;
+    }
+    //
+    // &--left {
+    //   width: 27%;
+    // }
+    //
+    // &--right {
+    //   width: 73%;
+    // }
   }
 
   .contacts__map {
     position: relative;
     margin-bottom: 40px;
-    background-image: url("../img/map-tablet@1x.jpg");
+    // background-image: url("../img/map-tablet@1x.jpg");
     width: 768px;
     height: 457px;
 
-    &::before {
+    ::before {
+      top: 30%;
+      left: 47%;
+    }
+
+    ::after {
       display: block;
       position: absolute;
-      width: 67px;
-      height: 100px;
-      top: 110px;
-      left: 140px;
       content: "";
-      background-image: url("../img/icon-map-pin.svg");
-      z-index: 1;
+      height: 81px;
+      width: 47px;
+      background-image: url("../img/flag.svg");
+      .background();
+      left: 87%;
+      top: -263px;
     }
   }
 }
@@ -89,19 +151,44 @@
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    height: 540px;
     position: relative;
+    padding-top: 130px;
+    padding-bottom: 90px;
+  }
+
+  .contacts__title {
+    margin-left: 19%;
+    .font(53, 700, 57);
   }
 
   .contacts__table {
-    flex-direction: column;
+    margin-left: 19.5%;
+    margin-bottom: 97px;
+
+    tbody {
+      flex-direction: column;
+    }
+  }
+
+  .contacts__row--second {
+    margin: 0;
+  }
+
+  .contacts__row {
+    height: 60px;
   }
 
   .contacts__map {
     position: absolute;
-    background-image: url("../img/map-tablet@1x.jpg");
+    // background-image: url("../img/map-desktop@1x.jpg");
     width: 525px;
     height: 457px;
     left: 50%;
+    top: 85px;
+
+    ::after {
+      left: -88%;
+      top: 60px;
+    }
   }
 }
