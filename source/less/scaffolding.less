@@ -61,7 +61,7 @@ body {
 
 .catalog__item-wrapper {
   padding-left: 10%;
-  padding-right: 12%;
+  padding-right: 11%;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -76,7 +76,7 @@ body {
 }
 
 .container {
-  &--production {
+  &-production {
     border: 1px solid @lightgrey;
     padding-bottom: 35px;
     position: relative;
@@ -90,26 +90,26 @@ body {
     }
   }
 
-  &--order {
-    padding-top: 32px;
+  &-order {
+    padding-top: 35px;
     // padding-left: 24%;
   }
 
-  &--customer {
-    padding-top: 32px;
+  &-customer {
+    padding-top: 28px;
     padding-bottom: 10px;
   }
 
-  &--expander {
+  &-expander {
     margin-bottom: 20px;
   }
 
-  &--order-bottom {
+  &-order-bottom {
     padding-top: 15px;
     // margin: 0 9%;
   }
 
-  &--promo-link {
+  &-promo-link {
     position: relative;
   }
 }
@@ -123,7 +123,7 @@ body {
 
 @media (min-width: @tablet-width) {
   .container {
-    &--order-bottom {
+    &-order-bottom {
       display: flex;
       justify-content: space-between;
       padding: 55px 6% 45px;
@@ -135,39 +135,42 @@ body {
       }
     }
 
-    &--expander {
+    &-expander {
       display: flex;
       flex-direction: row;
       flex-wrap: nowrap;
       margin-bottom: 23px;
     }
 
-    &--customer {
+    &-customer {
       flex-direction: column;
       width: 100%;
       padding-top: 50px;
       padding-bottom: 25px;
     }
 
-    &--production {
+    &-production {
       display: flex;
       flex-direction: column;
       border: 1px solid @lightgrey;
+      padding-bottom: 45px;
     }
 
-    &--promo-link {
-      width: 100%;
+    &-promo-link {
+      // width: 100%;
       margin: 0 6.5%;
       display: flex;
+      align-items: flex-end;
     }
 
-    &--order {
+    &-order {
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: space-between;
       padding-top: 71px;
       padding-bottom: 5px;
+      padding-right: 10px;
     }
   }
 
@@ -185,6 +188,7 @@ body {
     &--contacts {
       margin: 15px 35%;
       width: 30%;
+      .font(17, 700, 20);
     }
 
     &--production {
@@ -205,13 +209,13 @@ body {
   .catalog__item-wrapper {
     margin-top: 0;
     padding: 0;
-    padding-left: 3%;
+    padding-left: 4%;
     padding-right: 4%;
   }
 
   .catalog__description-wrapper {
     width: 100%;
-    min-height: 260px;
+    min-height: 250px;
   }
 
   .catalog__price-wrapper {
@@ -220,43 +224,44 @@ body {
     justify-content: space-between;
     width: 100%;
     border-top: 1px solid @lightgrey;
-    padding: 20px 0;
+    padding: 20px 2%;
   }
 }
 
 @media (min-width: @desktop-width) {
   .container {
-    &--order {
+    &-order {
       padding-bottom: 10px;
       padding-top: 65px;
       justify-content: flex-start;
+      padding-right: 0;
     }
 
-    &--expander {
+    &-expander {
       margin-right: 0;
     }
 
-    &--order-bottom {
+    &-order-bottom {
       padding: 0;
-      padding-left: 19.5%;
+      padding-left: 19%;
       padding-right: 19.5%;
-      padding-top: 50px;
-      padding-bottom: 50px;
+      padding-top: 48px;
+      padding-bottom: 48px;
     }
 
-    &--production {
-      position: relative;
-      padding-top: 95px;
-      padding-left: 20%;
+    &-production {
+      padding-top: 93px;
+      padding-left: 80px;
       padding-bottom: 60px;
+      width: 290px;
     }
 
-    &--promo-link {
+    &-promo-link {
       margin-left: 4.5%;
       margin-right: 4.5%;
     }
 
-    &--customer {
+    &-customer {
       padding-top: 48px;
     }
   }
@@ -266,7 +271,9 @@ body {
 
     &--contacts {
       margin-left: 19.5%;
+      margin-top: 10px;
       width: 20%;
+      .font(17, 700, 20);
     }
 
     &--reviews {
@@ -290,5 +297,9 @@ body {
   .catalog__item-wrapper {
     padding-left: 9.5%;
     padding-right: 10%;
+  }
+
+  .catalog__price-wrapper {
+    padding: 20px 0 27px;
   }
 }

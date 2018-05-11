@@ -48,16 +48,18 @@
 }
 
 .hot-items__photo {
-  width: 260px;
-  height: 315px;
-  // background-image: url("../img/triple-set-mobile@1x.jpg");
   margin: 0 auto;
+  //
+  // img {
+  //   width: 260px;
+  //   height: 315px;
+  // }
 }
 
 .hot-items__price {
   .font(17, 700, 24);
   text-align: center;
-  margin: 26px auto;
+  margin: 23px auto;
 }
 
 @media (min-width: @tablet-width) {
@@ -112,13 +114,15 @@
   }
 
   .hot-items__photo {
-    // background-image: url("../img/triple-set-tablet.jpg");
-    width: 333px;
-    height: 404px;
     position: absolute;
     left: 115%;
     top: 55px;
     margin: 0;
+
+    img {
+      width: 333px;
+      height: 404px;
+    }
   }
 
   .hot-items__cell {
@@ -134,18 +138,20 @@
 
 @media (min-width: @desktop-width) {
   .hot-items {
+    width: 1050px;
+    margin: -15px auto 0;
     padding-top: 153px;
-    padding-left: 4%;
-    padding-right: 4%;
+    padding-left: 50px;
+    padding-right: 50px;
     flex-direction: row;
     justify-content: flex-start;
   }
 
   .hot-items__link {
     order: -1;
-    width: 7%;
-    margin-left: 4.5%;
-    margin-right: 5.5%;
+    width: 75px;
+    margin-left: 45px;
+    margin-right: 55px;
     align-self: flex-start;
   }
 
@@ -163,11 +169,13 @@
   }
 
   .hot-items__photo {
-    // background: url("../img/triple-set-desktop.jpg");
-    width: 525px;
-    height: 636px;
-    left: 122%;
-    top: -12%;
+    left: 350px;
+    top: -65px;
+
+    img {
+      width: 525px;
+      height: 636px;
+    }
   }
 
   .hot-items__description {
@@ -181,11 +189,11 @@
 
   .hot-items__cell {
     &--left {
-      width: 32%;
+      width: 90px;
     }
 
     &--right {
-      width: 68%;
+      width: 180px;
     }
   }
 }
