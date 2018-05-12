@@ -10,22 +10,6 @@
   margin-top: 20px;
   margin-bottom: 20px;
 
-  &--tablet {
-    display: none;
-  }
-
-  &--desktop {
-    display: none;
-  }
-
-  &--new {
-    display: none;
-  }
-
-  &--sale {
-    display: none;
-  }
-
   &:hover {
     opacity: 0.6;
   }
@@ -95,7 +79,7 @@
   text-decoration: none;
   padding-left: 23%;
   padding-top: 27px;
-  padding-bottom: 28px;
+  padding-bottom: 27px;
 
   &:hover {
     opacity: 0.6;
@@ -133,16 +117,13 @@
     position: absolute;
     left: 10%;
     top: 40%;
-    fill: #d8d7d7;
+    fill: #231f20;
     opacity: 0.2;
   }
 
   &:hover {
     svg {
       opacity: 1;
-    }
-
-    path {
       fill: @teal;
     }
   }
@@ -159,16 +140,13 @@
     position: absolute;
     left: 10%;
     top: 40%;
-    fill: #d8d7d7;
+    fill: #231f20;
     opacity: 0.2;
   }
 
   &:hover {
     svg {
       opacity: 1;
-    }
-
-    path {
       fill: @teal;
     }
   }
@@ -197,17 +175,11 @@
   .header__logo {
     margin: 0;
     padding: 0;
+    margin-left: 6%;
 
-    &--tablet {
-      display: block;
-      margin-left: 6%;
-      // position: absolute;
-      // left: 50px;
-      // top: 20px;
-    }
-
-    &--modile {
-      display: none;
+    img {
+      width: 113px;
+      height: 46px;
     }
   }
 
@@ -252,7 +224,6 @@
 
     &--catalog {
       .font(15, 700, 24);
-      display: block;
       position: absolute;
       order: 1;
       left: 50px;
@@ -286,6 +257,10 @@
     }
   }
 
+  .header__link {
+    padding: 0;
+  }
+
   .header__list {
     display: flex;
     flex-direction: row;
@@ -309,28 +284,29 @@
 }
 
 @media (min-width: @desktop-width) {
+  .header {
+    width: 1150px;
+    margin: 0 auto;
+  }
+
   .header__nav--open {
     width: 100%;
-    margin-left: 4%;
-    margin-right: 4%;
+    margin-left: 50px;
+    margin-right: 50px;
     position: relative;
   }
 
   .header__logo {
-    &--modile {
-      display: none;
-    }
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 10px;
+    z-index: 2;
+    margin: 0;
 
-    &--tablet {
-      display: none;
-    }
-
-    &--desktop {
-      display: block;
-      position: absolute;
-      left: calc(43.5%);
-      top: 10px;
-      z-index: 2;
+    img {
+      width: 149px;
+      height: 72px;
     }
   }
 
@@ -342,6 +318,8 @@
     position: relative;
 
     &--catalog {
+      display: flex;
+      justify-content: flex-start;
       position: static;
       order: -2;
       border-right: 1px solid @lightgrey;

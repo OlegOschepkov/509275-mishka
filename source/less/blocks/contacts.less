@@ -24,11 +24,11 @@
   .font(15, 400, 30);
 
   &--left {
-    width: 27%;
+    width: 29%;
   }
 
   &--right {
-    width: 73%;
+    width: 71%;
   }
 
   &--adress {
@@ -57,11 +57,13 @@
 
 .contacts__map {
   position: relative;
-  // background-image: url("../img/map-mobile@1x.jpg");
-  width: 320px;
-  height: 457px;
   margin: 0 auto;
-  margin-bottom: 40px;
+  margin-bottom: 35px;
+
+  img {
+    width: 320px;
+    height: 457px;
+  }
 
   &::before {
     display: block;
@@ -83,7 +85,7 @@
 
   .contacts__title {
     .font(43, 700, 50);
-    margin: 25px 6% 45px;
+    margin: 23px 6% 45px;
   }
 
   .contacts__table {
@@ -97,10 +99,10 @@
   }
 
   .contacts__row {
-    width: 49%;
+    width: 45%;
 
     &--second {
-      margin-left: 2%;
+      margin-left: 6%;
     }
   }
 
@@ -110,29 +112,32 @@
     &--adress {
       padding: 0;
     }
-    //
-    // &--left {
-    //   width: 27%;
-    // }
-    //
-    // &--right {
-    //   width: 73%;
-    // }
+
+    &--left {
+      width: 28%;
+    }
+
+    &--right {
+      width: 72%;
+    }
   }
 
   .contacts__map {
     position: relative;
-    margin-bottom: 40px;
+    margin-bottom: 35px;
     // background-image: url("../img/map-tablet@1x.jpg");
-    width: 768px;
-    height: 457px;
 
-    ::before {
+    img {
+      width: 768px;
+      height: 457px;
+    }
+
+    &::before {
       top: 30%;
       left: 47%;
     }
 
-    ::after {
+    &::after {
       display: block;
       position: absolute;
       content: "";
@@ -152,8 +157,10 @@
     flex-direction: column;
     flex-wrap: wrap;
     position: relative;
-    padding-top: 130px;
+    padding-top: 120px;
     padding-bottom: 90px;
+    width: 1150px;
+    margin: 0 auto;
   }
 
   .contacts__title {
@@ -170,25 +177,29 @@
     }
   }
 
-  .contacts__row--second {
-    margin: 0;
+  .contacts__row {
+    height: 62px;
+    width: 285px;
   }
 
-  .contacts__row {
-    height: 60px;
+  .contacts__row--second {
+    margin: 0;
   }
 
   .contacts__map {
     position: absolute;
     // background-image: url("../img/map-desktop@1x.jpg");
-    width: 525px;
-    height: 457px;
     left: 50%;
-    top: 85px;
+    top: 70px;
 
-    ::after {
+    img {
+      width: 525px;
+      height: 457px;
+    }
+
+    &::after {
       left: -88%;
-      top: 60px;
+      top: 65px;
     }
   }
 }
