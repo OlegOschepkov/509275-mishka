@@ -35,6 +35,10 @@ body {
 
   &--teal {
     background-color: @teal;
+    color: white;
+    border: none;
+    text-transform: uppercase;
+    width: 100%;
   }
 
   &--reviews {
@@ -60,7 +64,7 @@ body {
 }
 
 .catalog__item-wrapper {
-  padding-left: 10%;
+  padding-left: 11%;
   padding-right: 11%;
   display: flex;
   justify-content: space-between;
@@ -204,6 +208,12 @@ body {
 
     &--hot-items {
       width: 100%;
+      font-size: 17px;
+    }
+
+    &--teal {
+      .font(17, 700, 16);
+      width: 100%;
     }
   }
 
@@ -247,7 +257,7 @@ body {
       padding-left: 19%;
       padding-right: 19.5%;
       padding-top: 48px;
-      padding-bottom: 48px;
+      padding-bottom: 46px;
     }
 
     &-production {
@@ -288,6 +298,10 @@ body {
 
     &--order {
       width: 33%;
+    }
+
+    &--teal {
+      width: 100%;
     }
   }
 

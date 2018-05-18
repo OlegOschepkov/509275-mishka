@@ -11,6 +11,9 @@
   </head>
 
   <body>
+    <div style="display:none">
+      <include src="build/img/sprite.svg"></include>
+    </div>
 
     <header class="header">
       <a class="header__logo" href="index.html" aria-label="Переход на главную страницу">
@@ -20,7 +23,7 @@
           <img src="img/logo-mobile.svg" alt="Логотип" height="35" width="85">
         </picture>
       </a>
-      <nav class="header__nav--open">
+      <nav class="header__nav header__nav--nojs header__nav--open">
         <button class="header__toggle">
           <span class="visually-hidden">Меню сайта</span></button>
         <ul class="header__list">
@@ -32,13 +35,13 @@
           </li>
           <li class="header__item header__item--search">
             <svg  width="17.6" height="17.6">
-              <use xlink:href="img/sprite.svg#search"></use>
+              <use xlink:href="img/sprite.svg#icon-search"></use>
             </svg>
             <a class="header__link" href="">Поиск по сайту</a>
           </li>
           <li class="header__item header__item--cart">
             <svg  width="20.294" height="18.849">
-              <use xlink:href="img/sprite.svg#cart"></use>
+              <use xlink:href="img/sprite.svg#icon-cart"></use>
             </svg>
             <a class="header__link" href="">Корзина: пока пуста</a>
           </li>
@@ -108,16 +111,16 @@
           </fieldset>
           <fieldset class="order__form-block order__form-block--grey">
             <legend class="order__legend">Тел</legend>
-            <svg class="order__customer-icon order__customer-icon--phone" width="24.829" height="24.333">
-              <use xlink:href="img/sprite.svg#phone"></use>
-            </svg>
                 <input class="order__customer order__customer--phone" type="tel" id="phone" name="order-phone" placeholder="+7 ХХХ ХХ ХХ*">
                 <label class="order__customer-label visually-hidden" for="phone"></label>
+                <svg class="order__customer-icon order__customer-icon--phone" width="24.829" height="24.333">
+                  <use xlink:href="img/sprite.svg#icon-phone"></use>
+                </svg>
           </fieldset>
           <fieldset class="order__form-block order__form-block--grey">
             <legend class="order__legend order__legend--email">E-mail</legend>
             <svg class="order__customer-icon order__customer-icon--email" width="32" height="32">
-              <use xlink:href="img/sprite.svg#email"></use>
+              <use xlink:href="img/sprite.svg#icon-mail"></use>
             </svg>
                 <input class="order__customer order__customer--email" type="email" id="email" name="order-email" placeholder="Ваш Email*">
                 <label class="order__customer-label visually-hidden" for="email"></label>
@@ -137,7 +140,7 @@
 
     <footer class="footer">
       <svg class="footer__logo" width="101.615" height="34.056">
-        <use xlink:href="img/sprite.svg#footer-logo"></use>
+        <use xlink:href="img/sprite.svg#logo-footer"></use>
       </svg>
       <div class="footer__social social">
         <h3 class="visually-hidden">Посетите на наши страницы на:</h3>
@@ -145,7 +148,7 @@
           <li class="social__item">
             <a class="social__link social__link--instagram" href="https://instagram.com/htmlacademy">
               <svg  width="21.769" height="21.334">
-                <use xlink:href="img/sprite.svg#instagram"></use>
+                <use xlink:href="img/sprite.svg#icon-insta"></use>
                 </svg>
               <span class="visually-hidden" lang="en">Instagram</span>
             </a>
@@ -153,7 +156,7 @@
           <li class="social__item">
             <a class="social__link social__link--facebook" href="https://facebook.com/htmlacademy">
               <svg  width="14.962" height="27.718">
-                <use xlink:href="img/sprite.svg#facebook"></use>
+                <use xlink:href="img/sprite.svg#icon-fb"></use>
               </svg>
               <span class="visually-hidden" lang="en">Facebook</span>
             </a>
@@ -161,7 +164,7 @@
           <li class="social__item">
             <a class="social__link social__link--twitter" href="https://twitter.com/htmlacademy">
               <svg width="23.494" height="20.168">
-                <use xlink:href="img/sprite.svg#twitter"></use>
+                <use xlink:href="img/sprite.svg#icon-twitter"></use>
               </svg>
               <span class="visually-hidden" lang="en">Twitter</span>
             </a>
@@ -172,13 +175,18 @@
         <a class="footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">
         <span>Разработано</span>
         <svg width="26px" height="34px">
-          <use xlink:href="img/sprite.svg#htmlacademy"></use>
+          <use xlink:href="img/sprite.svg#logo-htmlacademy"></use>
           </svg>
           <span class="visually-hidden">"Профессиональный HTML и CSS, уровень 2" на сайте HTML Academy</span>
         </a>
       </div>
     </footer>
-
+    <script src="js/popup.js"></script>
+    <script>
+        // Picture element HTML5 shiv
+        document.createElement( "picture" );
+    </script>
+    <script src="picturefill.js" async></script>
   </body>
 
 </html>

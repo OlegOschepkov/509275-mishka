@@ -95,16 +95,19 @@
         <path d="M12.529 9.327v1.552a1.42 1.42 0 0 1 1.421 1.42h1.553a2.973 2.973 0 0 0-2.974-2.972zM12.529 6.246a6.054 6.054 0 0 1 6.056 6.054h1.588a7.642 7.642 0 0 0-7.644-7.641v1.587z"/>
       </symbol> -->
     <!-- </svg> -->
+    <div style="display:none">
+      <include src="build/img/sprite.svg"></include>
+    </div>
 
     <header class="header">
-      <a class="header__logo" href="index.html" aria-label="Переход на главную страницу">
+      <a class="header__logo" href="" aria-label="Логотип Мишка">
         <picture>
           <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
           <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
           <img src="img/logo-mobile.svg" alt="Логотип" height="35" width="85">
         </picture>
       </a>
-      <nav class="header__nav--open">
+      <nav class="header__nav header__nav--nojs header__nav--open">
         <button class="header__toggle">
           <span class="visually-hidden">Меню сайта</span></button>
         <ul class="header__list">
@@ -116,13 +119,13 @@
           </li>
           <li class="header__item header__item--search">
             <svg  width="17.6" height="17.6">
-              <use xlink:href="img/sprite.svg#search"></use>
+              <use xlink:href="img/sprite.svg#icon-search"></use>
             </svg>
             <a class="header__link" href="">Поиск по сайту</a>
           </li>
           <li class="header__item header__item--cart">
             <svg  width="20.294" height="18.849">
-              <use xlink:href="img/sprite.svg#cart"></use>
+              <use xlink:href="img/sprite.svg#icon-cart"></use>
             </svg>
             <a class="header__link" href="">Корзина: пока пуста</a>
           </li>
@@ -149,13 +152,13 @@
           <a class="promo__link" href="">
             <span class="promo__link-text">Предметы интерьера</span>
             <svg  width="62.219" height="62.411" class="promo__link--lamp">
-              <use xlink:href="img/sprite.svg#lamp"></use>
+              <use xlink:href="img/sprite.svg#icon-interior"></use>
             </svg>
           </a>
           <a class="promo__link promo__link--dark" href="">
             <span class="promo__link-text promo__link-text--toys">Детские игрушки</span>
             <svg class="promo__link--cube"  width="64" height="59.62">
-              <use xlink:href="img/sprite.svg#cube"></use>
+              <use xlink:href="img/sprite.svg#icon-toy"></use>
             </svg>
           </a>
         </div>
@@ -191,7 +194,7 @@
             </picture>
           </div>
           <p class="hot-items__price">Цена: 990 руб.</p>
-          <button class="btn btn--hot-items">Заказать</button>
+          <button class="btn btn--hot-items modal--popup">Заказать</button>
         </div>
       </section>
 
@@ -201,41 +204,41 @@
           <div>
             <li class="advantages__item">
               <svg class="advantages__icon advantages__icon--flower" width="31.972" height="37.301">
-                <use xlink:href="img/sprite.svg#flower"></use>
+                <use xlink:href="img/sprite.svg#icon-feature-flower"></use>
               </svg>
-              <p class="advantages__item-text">Экологически чистые материалы</p>
+              <p class="advantages__item-text advantages__item-text--flower">Экологически чистые материалы</p>
             </li>
             <li class="advantages__item">
               <svg class="advantages__icon advantages__icon--money" width="46.575" height="27.332">
-                <use xlink:href="img/sprite.svg#money"></use>
+                <use xlink:href="img/sprite.svg#icon-feature-money"></use>
               </svg>
-              <p class="advantages__item-text">Скандинавский стиль по российской цене</p>
+              <p class="advantages__item-text advantages__item-text--money">Скандинавский стиль по российской цене</p>
             </li>
             <li class="advantages__item">
               <svg class="advantages__icon advantages__icon--heart" width="33.05" height="27.857">
-                <use xlink:href="img/sprite.svg#heart"></use>
+                <use xlink:href="img/sprite.svg#icon-feature-heart"></use>
               </svg>
-              <p class="advantages__item-text">Увеличивает лайки на фотографиях</p>
+              <p class="advantages__item-text advantages__item-text--heart">Увеличивает лайки на фотографиях</p>
             </li>
           </div>
           <div>
             <li class="advantages__item">
               <svg class="advantages__icon advantages__icon--ball" width="34" height="34" >
-                <use xlink:href="img/sprite.svg#ball"></use>
+                <use xlink:href="img/sprite.svg#icon-feature-ball"></use>
               </svg>
-              <p class="advantages__item-text">Связано вручную с любовью и умилением</p>
+              <p class="advantages__item-text advantages__item-text--ball">Связано вручную с любовью и умилением</p>
             </li>
             <li class="advantages__item">
               <svg class="advantages__icon advantages__icon--rocket" width="54.156" height="23.183">
-                <use xlink:href="img/sprite.svg#rocket"></use>
+                <use xlink:href="img/sprite.svg#icon-feature-rocket"></use>
               </svg>
-              <p class="advantages__item-text">Поддержка отечественного производителя</p>
+              <p class="advantages__item-text advantages__item-text--rocket">Поддержка отечественного производителя</p>
             </li>
             <li class="advantages__item">
               <svg class="advantages__icon advantages__icon--gift" width="32.666" height="32.486">
-                <use xlink:href="img/sprite.svg#gift"></use>
+                <use xlink:href="img/sprite.svg#icon-feature-gift"></use>
               </svg>
-              <p class="advantages__item-text">Поставляется в подарочной упаковке</p>
+              <p class="advantages__item-text advantages__item-text--gift">Поставляется в<br>подарочной упаковке</p>
             </li>
           </div>
         </ul>
@@ -273,20 +276,25 @@
             <tr class="contacts__row contacts__row--second">
               <td class="contacts__cell contacts__cell--left contacts__cell--second-left">адрес:</td>
               <td class="contacts__cell contacts__cell--right contacts__cell--adress">
-                г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101
+                <p class="contacts__cell--adress-text">г. Санкт-Петербург,</p>
+                <p class="contacts__cell--adress-text">ул. Большая Конюшенная,</p>
+                <p class="contacts__cell--adress-text">д. 19/8, офис 101</p>
               </td>
             </tr>
           </tbody>
         </table>
         <div class="contacts__map">
-          <picture>
-            <source type="image/webp" media="(min-width: 1150px)" srcset="img/map-desktop@1x.webp 1x, img/map-desktop@2x.webp 2x">
-            <source type="image/webp" media="(min-width: 768px)" srcset="img/map-tablet@1x.webp 1x, img/map-tablet@2x.webp 2x">
-            <source type="image/webp" srcset="img/map-mobile@1x.webp 1x, img/map-mobile@2x.webp 2x">
-            <source media="(min-width: 1150px)" srcset="img/map-desktop@1x.jpg 1x, img/map-desktop@2x.jpg 2x">
-            <source media="(min-width: 768px)" srcset="img/map-tablet@1x.jpg 1x, img/map-tablet@2x.jpg 2x">
-            <img src="img/map-mobile@1x.jpg" srcset="img/map-mobile@2x.jpg 2x" alt="Мы находимся по адресу: г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101" width="457" height="322">
-          </picture>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043651568!2d30.320894616461533!3d59.93879418187628!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+Street%2C+19%2C+Sankt-Peterburg%2C+191186!5e0!3m2!1sen!2sru!4v1526561681456" frameborder="0" style="border:0" allowfullscreen></iframe>
+          <!-- <a href="https://www.google.ru/maps">
+            <picture>
+              <source type="image/webp" media="(min-width: 1150px)" srcset="img/map-desktop@1x.webp 1x, img/map-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/map-tablet@1x.webp 1x, img/map-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/map-mobile@1x.webp 1x, img/map-mobile@2x.webp 2x">
+              <source media="(min-width: 1150px)" srcset="img/map-desktop@1x.jpg 1x, img/map-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/map-tablet@1x.jpg 1x, img/map-tablet@2x.jpg 2x">
+              <img src="img/map-mobile@1x.jpg" srcset="img/map-mobile@2x.jpg 2x" alt="Мы находимся по адресу: г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101" width="457" height="322">
+            </picture>
+          </a> -->
         </div>
         <button class="btn btn--contacts">Напишите нам</button>
       </section>
@@ -295,7 +303,7 @@
 
     <footer class="footer">
       <svg class="footer__logo" width="101.615" height="34.056">
-        <use xlink:href="img/sprite.svg#footer-logo"></use>
+        <use xlink:href="img/sprite.svg#logo-footer"></use>
       </svg>
       <div class="footer__social social">
         <h3 class="visually-hidden">Посетите на наши страницы на:</h3>
@@ -303,7 +311,7 @@
           <li class="social__item">
             <a class="social__link social__link--instagram" href="https://instagram.com/htmlacademy">
               <svg  width="21.769" height="21.334">
-                <use xlink:href="img/sprite.svg#instagram"></use>
+                <use xlink:href="img/sprite.svg#icon-insta"></use>
                 </svg>
               <span class="visually-hidden" lang="en">Instagram</span>
             </a>
@@ -311,7 +319,7 @@
           <li class="social__item">
             <a class="social__link social__link--facebook" href="https://facebook.com/htmlacademy">
               <svg  width="14.962" height="27.718">
-                <use xlink:href="img/sprite.svg#facebook"></use>
+                <use xlink:href="img/sprite.svg#icon-fb"></use>
               </svg>
               <span class="visually-hidden" lang="en">Facebook</span>
             </a>
@@ -319,7 +327,7 @@
           <li class="social__item">
             <a class="social__link social__link--twitter" href="https://twitter.com/htmlacademy">
               <svg width="23.494" height="20.168">
-                <use xlink:href="img/sprite.svg#twitter"></use>
+                <use xlink:href="img/sprite.svg#icon-twitter"></use>
               </svg>
               <span class="visually-hidden" lang="en">Twitter</span>
             </a>
@@ -330,7 +338,7 @@
         <a class="footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">
         <span>Разработано</span>
         <svg width="26px" height="34px">
-          <use xlink:href="img/sprite.svg#htmlacademy"></use>
+          <use xlink:href="img/sprite.svg#logo-htmlacademy"></use>
           </svg>
           <span class="visually-hidden">"Профессиональный HTML и CSS, уровень 2" на сайте HTML Academy</span>
         </a>
@@ -338,23 +346,30 @@
     </footer>
 
     <section class="modal">
-      <h2 class="modal__title">Добавить в корзину</h2>
-      <p class="modal__description">Выберите размер:</p>
-      <div class="container">
-        <ul class="modal__sizes-list">
-          <li>
-            <button class="modal__size">S</button>
-          </li>
-          <li>
-            <button class="modal__size">M</button>
-          </li>
-          <li>
-            <button class="modal__size">L</button>
-          </li>
-        </ul>
-        <button class="btn btn--teal">Добавить</button>
+      <div class="modal__content">
+        <h2 class="modal__title">Добавить в корзину</h2>
+        <p class="modal__description">Выберите размер:</p>
+        <div class="container">
+          <ul class="modal__sizes-list">
+            <li>
+              <button class="modal__size">S</button>
+            </li>
+            <li>
+              <button class="modal__size">M</button>
+            </li>
+            <li>
+              <button class="modal__size">L</button>
+            </li>
+          </ul>
+          <button class="btn btn--teal modal--close">Добавить</button>
+        </div>
       </div>
     </section>
-
+  <script src="js/popup.js"></script>
+  <script>
+      // Picture element HTML5 shiv
+      document.createElement( "picture" );
+  </script>
+  <script src="picturefill.js" async></script>
   </body>
 </html>

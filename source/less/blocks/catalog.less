@@ -55,8 +55,8 @@
 .catalog__item-name {
   .font(17, 700, 24);
   margin: 0;
-  margin-top: 23px;
-  margin-bottom: 3px;
+  margin-top: 25px;
+  margin-bottom: 5px;
   color: black;
 
   &:hover {
@@ -83,18 +83,12 @@
 
   &:hover {
     opacity: 1;
-
-    path {
-      fill: @teal;
-    }
+    fill: @teal;
   }
 
   &:active {
     opacity: 0.3;
-
-    path {
-      fill: @teal;
-    }
+    fill: @teal;
   }
 }
 
@@ -146,6 +140,10 @@
     .font(20, 700, 24);
     margin-top: 25px;
     margin-bottom: 7px;
+
+    &--basket {
+      width: 80%;
+    }
   }
 
   .catalog__item-description {

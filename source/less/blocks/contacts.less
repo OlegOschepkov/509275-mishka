@@ -14,10 +14,6 @@
 
 .contacts__row {
   height: 85px;
-
-  &--second {
-    max-height: 188px;
-  }
 }
 
 .contacts__cell {
@@ -33,6 +29,10 @@
 
   &--adress {
     padding-right: 40px;
+  }
+
+  &--adress-text {
+    margin: 0;
   }
 
   &--second-left {
@@ -61,7 +61,7 @@
   margin-bottom: 35px;
   width: 320px;
 
-  img {
+  iframe {
     width: 320px;
     height: 457px;
   }
@@ -90,8 +90,10 @@
   }
 
   .contacts__table {
-    margin-left: 6%;
-    margin-bottom: 65px;
+    margin-left: 6.5%;
+    margin-right: 0;
+    margin-bottom: 64px;
+    width: 93.5%;
 
     tbody {
       display: flex;
@@ -100,11 +102,11 @@
   }
 
   .contacts__row {
-    width: 45%;
+    width: 46%;
 
-    &--second {
-      margin-left: 6%;
-    }
+    // &--second {
+    //   margin-left: 6%;
+    // }
   }
 
   .contacts__cell {
@@ -115,11 +117,15 @@
     }
 
     &--left {
-      width: 28%;
+      width: 26%;
     }
 
     &--right {
       width: 72%;
+    }
+
+    &--adress-text {
+      padding-top: 1px;
     }
   }
 
@@ -130,7 +136,7 @@
     width: 768px;
     // background-image: url("../img/map-tablet@1x.jpg");
 
-    img {
+    iframe {
       width: 768px;
       height: 457px;
     }
@@ -146,10 +152,10 @@
       content: "";
       height: 81px;
       width: 47px;
-      background-image: url("../img/flag.svg");
+      background-image: url("../img/icon-flag.svg");
       .background();
       left: 87%;
-      top: -263px;
+      top: -258px;
     }
   }
 }
@@ -166,6 +172,10 @@
     margin: 0 auto;
   }
 
+  .contacts__cell--left {
+    width: 25%;
+  }
+
   .contacts__title {
     margin-left: 19%;
     .font(53, 700, 57);
@@ -174,6 +184,7 @@
   .contacts__table {
     margin-left: 19.5%;
     margin-bottom: 97px;
+    width: 320px;
 
     tbody {
       flex-direction: column;
@@ -182,7 +193,7 @@
 
   .contacts__row {
     height: 62px;
-    width: 285px;
+    width: auto;
   }
 
   .contacts__row--second {
@@ -190,12 +201,15 @@
   }
 
   .contacts__map {
+    margin: 0;
+    padding: 0;
     position: absolute;
     // background-image: url("../img/map-desktop@1x.jpg");
     left: 50%;
     top: 70px;
+    width: auto;
 
-    img {
+    iframe {
       width: 525px;
       height: 457px;
     }
@@ -203,6 +217,11 @@
     &::after {
       left: -88%;
       top: 65px;
+    }
+
+    &::before {
+      top: 32%;
+      left: 240px;
     }
   }
 }
