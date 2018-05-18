@@ -1,52 +1,52 @@
-  {
-    "browserslist": [
-      "last 2 versions",
-      "IE 11",
-      "Firefox ESR"
-    ],
-    "dependencies": {
-      "del": "^3.0.0",
-      "gulp-csso": "^3.0.1",
-      "gulp-imagemin": "^4.1.0",
-      "gulp-jsmin": "^0.1.5",
-      "gulp-posthtml": "^3.0.4",
-      "gulp-rename": "^1.2.2",
-      "gulp-svgstore": "^6.1.1",
-      "gulp-webp": "^3.0.0",
-      "posthtml-include": "^1.1.0",
-      "run-sequence": "^2.2.1"
-    },
-    "description": "Личный проект «Пинк» от HTML Academy",
-    "devDependencies": {
-      "@htmlacademy/editorconfig-cli": "1.x",
-      "autoprefixer": "8.3.x",
-      "browser-sync": "2.23.x",
-      "gulp": "^3.9.1",
-      "gulp-less": "4.0.x",
-      "gulp-plumber": "1.2.x",
-      "gulp-postcss": "7.0.x",
-      "pixel-glass": "^1.0.13",
-      "stylelint": "9.2.x",
-      "stylelint-config-htmlacademy": "0.1.x"
-    },
-    "editorconfig-cli": [
-      "*.json",
-      "*.js",
-      "source/*.html",
-      "source/js/**/*.js",
-      "source/img/**/*.svg",
-      "source/less/**/*.less"
-    ],
-    "engines": {
-      "node": "8.11"
-    },
-    "private": true,
-    "scripts": {
-      "build": "gulp build",
-      "editorconfig": "editorconfig-cli",
-      "start": "npm run build \u0026\u0026 gulp serve",
-      "stylelint": "stylelint \"source/less/**/*.less\" --syntax less",
-      "test": "npm run editorconfig \u0026\u0026 npm run stylelint"
-    },
-    "version": "14.0.0"
-  }
+{
+  "browserslist": [
+    "last 2 versions",
+    "IE 11",
+    "Firefox ESR"
+  ],
+  "dependencies": {
+    "del": "^3.0.0",
+    "gulp-csso": "^3.0.1",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-jsmin": "^0.1.5",
+    "gulp-posthtml": "^3.0.4",
+    "gulp-rename": "^1.2.2",
+    "gulp-svgstore": "^6.1.1",
+    "gulp-webp": "^3.0.0",
+    "posthtml-include": "^1.1.0",
+    "run-sequence": "^2.2.1"
+  },
+  "description": "Личный проект «Пинк» от HTML Academy",
+  "devDependencies": {
+    "@htmlacademy/editorconfig-cli": "1.x",
+    "autoprefixer": "8.3.x",
+    "browser-sync": "2.23.x",
+    "gulp": "^3.9.1",
+    "gulp-less": "4.0.x",
+    "gulp-plumber": "1.2.x",
+    "gulp-postcss": "7.0.x",
+    "pixel-glass": "^1.0.13",
+    "stylelint": "9.2.x",
+    "stylelint-config-htmlacademy": "0.1.x"
+  },
+  "editorconfig-cli": [
+    "*.json",
+    "*.js",
+    "source/*.html",
+    "source/js/**/*.js",
+    "source/img/**/*.svg",
+    "source/less/**/*.less"
+  ],
+  "engines": {
+    "node": "8.11"
+  },
+  "private": true,
+  "scripts": {
+    "build": "gulp build",
+    "editorconfig": "editorconfig-cli",
+    "start": "npm run build && gulp serve",
+    "stylelint": "stylelint \"source/less/**/*.less\" --syntax less",
+    "test": "npm run editorconfig && npm run stylelint"
+  },
+  "version": "14.0.0"
+}
