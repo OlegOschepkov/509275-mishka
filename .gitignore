@@ -9,3 +9,8 @@ node_modules/
 npm-debug.*
 source/css/*.css
 Thumbs.db
+build/
+reference-img/
+*.npm-ignore
+contributing.*
+readme.md

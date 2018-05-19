@@ -57,11 +57,31 @@
   padding-top: 68px;
   padding-bottom: 15px;
   margin: 0;
+
+  &--flower {
+    width: 67%;
+  }
+
+  &--money {
+    width: 85%;
+  }
+
+  &--heart {
+    width: 70%;
+  }
+
+  &--ball {
+    width: 80%;
+  }
 }
 
 @media (min-width: @tablet-width) {
   .advantages {
-    padding: 59px 6% 40px;
+    padding: 68px 6% 40px;
+    background-image: url("../img/bg-zigzag-line.svg");
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: 100% auto, auto;
   }
 
   .advantages__title {
@@ -83,6 +103,10 @@
     .font(20, 700, 22);
     padding-top: 87px;
     padding-bottom: 25px;
+
+    &--money {
+      width: 75%;
+    }
   }
 
   .advantages__icon {
@@ -116,7 +140,7 @@
 @media (min-width: @desktop-width) {
   .advantages {
     width: 1050px;
-    padding: 95px 50px 40px;
+    padding: 88px 0 40px;
     margin: 0 auto;
   }
 
