@@ -1,11 +1,11 @@
 .contacts {
-  padding-top: 37px;
+  padding-top: 32px; //35
   padding-bottom: 40px;
 }
 
 .contacts__title {
   .font(18, 700, 30);
-  margin: 0 9%;
+  margin: 0 9% 5px;
 }
 
 .contacts__table {
@@ -13,7 +13,7 @@
 }
 
 .contacts__row {
-  height: 85px;
+  height: 80px;
 }
 
 .contacts__cell {
@@ -60,6 +60,7 @@
   margin: 0 auto;
   margin-bottom: 35px;
   width: 320px;
+  border: none;
 
   iframe {
     width: 320px;
@@ -81,12 +82,12 @@
 
 @media (min-width: @tablet-width) {
   .contacts {
-    padding-bottom: 40px;
+    padding-bottom: 45px;
   }
 
   .contacts__title {
     .font(43, 700, 50);
-    margin: 23px 6% 45px;
+    margin: 23px 6% 48px;
   }
 
   .contacts__table {
@@ -94,19 +95,17 @@
     margin-right: 0;
     margin-bottom: 64px;
     width: 93.5%;
+  }
 
-    tbody {
-      display: flex;
-      flex-direction: row;
-    }
+  .contacts__body {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
   }
 
   .contacts__row {
     width: 46%;
-
-    // &--second {
-    //   margin-left: 6%;
-    // }
+    // height: 62px;
   }
 
   .contacts__cell {
@@ -132,9 +131,8 @@
   .contacts__map {
     position: relative;
     margin: 0 auto;
-    margin-bottom: 35px;
+    margin-bottom: 40px; //35px
     width: 768px;
-    // background-image: url("../img/map-tablet@1x.jpg");
 
     iframe {
       width: 768px;
@@ -166,8 +164,8 @@
     flex-direction: column;
     flex-wrap: wrap;
     position: relative;
-    padding-top: 120px;
-    padding-bottom: 90px;
+    padding-top: 110px; //120
+    padding-bottom: 95px;
     width: 1150px;
     margin: 0 auto;
   }
@@ -177,7 +175,10 @@
   }
 
   .contacts__title {
+    width: 320px;
     margin-left: 19%;
+    margin-bottom: 51px; //47
+    margin-top: 30px; //25
     .font(53, 700, 57);
   }
 
@@ -185,10 +186,15 @@
     margin-left: 19.5%;
     margin-bottom: 97px;
     width: 320px;
+  }
 
-    tbody {
-      flex-direction: column;
-    }
+  .contacts__body {
+    flex-direction: column;
+    width: 320px;
+  }
+
+  .contacts__cell-mail {
+    padding-left: 3px;
   }
 
   .contacts__row {
@@ -204,7 +210,6 @@
     margin: 0;
     padding: 0;
     position: absolute;
-    // background-image: url("../img/map-desktop@1x.jpg");
     left: 50%;
     top: 70px;
     width: auto;

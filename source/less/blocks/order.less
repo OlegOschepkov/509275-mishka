@@ -34,17 +34,20 @@
   justify-content: center;
   .font(27, 700, 30);
   background-color: @lightgrey;
-  height: 175px;
+  min-height: 175px;
   padding: 0;
   margin: 0;
   margin-bottom: 25px;
 }
 
+.order__title-text {
+  display: block;
+}
 
 .order__label {
   display: block;
   position: relative;
-  height: 40px;
+  min-height: 40px;
   .font(17, 700, 18);
   padding-left: 24%;
   margin-bottom: 21px;
@@ -68,7 +71,6 @@
     border-color: black;
     opacity: 0.3;
   }
-
 
   &--color::before {
     display: block;
@@ -113,7 +115,6 @@
   width: 100%;
   .font(17, 400, 18);
   border: none;
-  // margin-bottom: 20px;
   border-bottom: 2px solid @black;
 
   &--phone {
@@ -138,11 +139,11 @@
 .order__customer-icon {
   position: absolute;
   left: 86.5%;
-  top: 20px;
+  top: 25px;
   opacity: 0.2;
 }
 
-.order__customer--email:hover .order__customer-icon--email {
+.order__customer:hover + .order__customer-icon {
   fill: @teal;
   opacity: 1;
 }
@@ -154,7 +155,6 @@
   .font(17, 400, 18);
   padding: 5%;
   margin-top: 25px;
-  // margin-bottom: 15px;
   border: 2px solid @black;
 
   &:hover {
@@ -180,8 +180,8 @@
 
   .order__title {
     .font(43, 700, 50);
-    height: 235px;
-    background-image: url("../img/zigzag-fill-desktop.svg");
+    min-height: 235px;
+    background-image: url("../img/bg-zigzag-fill.svg");
     background-position: bottom;
     background-repeat: repeat-x;
   }
@@ -209,6 +209,7 @@
     position: absolute;
     left: 6.5%;
     top: 71px;
+    max-width: 150px;
 
     &--email {
       top: 28px;
@@ -225,7 +226,7 @@
   .order__label {
     padding-left: 16.5%;
     margin-bottom: 0;
-    height: 77px;
+    min-height: 77px;
     .font(19, 700, 18);
 
     &--color {
@@ -260,12 +261,9 @@
     flex-grow: 1;
     .font(19, 400, 18);
     padding-left: 4%;
-    // margin-bottom: 22px;
-    // padding-left: 3%;
 
     &--email {
       width: 95%;
-      // margin-top: 50px;
       margin-bottom: 50px;
       padding-left: 4%;
     }
@@ -305,7 +303,7 @@
 
   .order__title {
     .font(53, 700, 57);
-    height: 265px;
+    min-height: 265px;
     margin: 0;
   }
 
