@@ -26,7 +26,7 @@ gulp.task("minifyHTML", function() {
 });
 
 gulp.task("minifyJS", function() {
-  gulp.src("source/*.js")
+  gulp.src("source/js/*.js")
     .pipe(minifyjs({
         ext:{
             src:"-debug.js",
@@ -35,7 +35,7 @@ gulp.task("minifyJS", function() {
         exclude: ["tasks"],
         ignoreFiles: [".combo.js", "-min.js"]
     }))
-    .pipe(gulp.dest("build"))
+    .pipe(gulp.dest("build/js"))
 });
 
 gulp.task("clean", function() {
