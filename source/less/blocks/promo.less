@@ -2,11 +2,10 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  justify-content: space-between;
   background-image: url("../img/hero-mobile@1x.jpg");
   background-color: #f9f9f9;
   .background(center, -15px);
-  min-height: 489px;
+  height: 489px;
 
   @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
     background-image: url("../img/hero-mobile@2x.jpg");
@@ -17,6 +16,7 @@
 .promo__title {
   text-align: center;
   margin: 0;
+  margin-bottom: auto;
 }
 
 .promo__title-text {
@@ -71,7 +71,7 @@
 
 @media (min-width: @tablet-width) {
   .promo {
-    min-height: 745px;
+    height: 745px;
     background-image: url("../img/hero-tablet@1x.jpg");
     .background(top);
     background-size: cover;
