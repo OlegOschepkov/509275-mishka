@@ -1,6 +1,10 @@
 var navMain = document.querySelector(".header__nav");
 var navToggle = document.querySelector(".header__toggle");
 
+if (navToggle.classList.contains("header__toggle--nojs")) {
+  navToggle.classList.remove("header__toggle--nojs");
+};
+
 if (navMain.classList.contains("header__nav--nojs")) {
   navMain.classList.remove("header__nav--open");
   navMain.classList.add("header__nav--closed");
@@ -22,10 +26,6 @@ var link = document.querySelectorAll(".modal--popup");
 var popup = document.querySelector(".modal");
 var close = popup.querySelector(".modal--close");
 
-// link.addEventListener("click", function (evt) {
-//   evt.preventDefault();
-//   popup.classList.add("modal--show");
-// });
 for (var i = 0; i < link.length; i++) {
   link[i].addEventListener("click", function (evt) {
     evt.preventDefault();

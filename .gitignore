@@ -14,3 +14,5 @@ reference-img/
 *.npm-ignore
 contributing.*
 readme.md
+img/
+source/img/mishka*.jpg

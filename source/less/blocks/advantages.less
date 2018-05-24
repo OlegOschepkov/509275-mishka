@@ -1,15 +1,35 @@
 .advantages {
-  padding: 30px 9% 0;
+  padding: 35px 9% 0;
+  margin: 0;
+  margin-bottom: 33px;
+  background-image: url("../img/bg-zigzag-line.svg");
+  // background-color: red;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: 100% auto, auto;
 }
 
 .advantages__title {
   .font(25, 700, 30);
-  margin-bottom: 0;
+  margin-bottom: 15px;
   margin-top: 0;
 }
 
 .advantages__list {
   list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.advantages__column {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.advantages__sublist {
+  list-style: none;
+  margin: 0;
   padding: 0;
 }
 
@@ -77,25 +97,35 @@
 
 @media (min-width: @tablet-width) {
   .advantages {
-    padding: 68px 6% 40px;
+    padding: 65px 6% 60px; //55
     background-image: url("../img/bg-zigzag-line.svg");
     background-position: top center;
     background-repeat: no-repeat;
     background-size: 100% auto, auto;
+    margin: 0;
   }
 
   .advantages__title {
     .font(43, 700, 50);
   }
 
+  .advantages__title-text {
+    margin-bottom: 13px;
+  }
+
   .advantages__list {
     display: flex;
     flex-wrap: nowrap;
     flex-direction: row;
+    padding-left: 5px;
+  }
+
+  .advantages__sublist {
+    display: flex;
+    flex-direction: column;
   }
 
   .advantages__item {
-    padding-left: 4px;
     width: 100%;
   }
 
@@ -135,40 +165,52 @@
       top: 33px;
     }
   }
+
+  .advantages__column {
+    width: 49.5%;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .advantages {
-    width: 1050px;
-    padding: 88px 0 40px;
-    margin: 0 auto;
+    padding: 82px 0 50px;
+    background-size: 1050px;
+
+    .container {
+      width: 710px;
+      margin: 0 auto;
+    }
   }
 
   .advantages__title {
     .font(53, 700, 57);
-    margin-left: 16%;
   }
 
-  .advantages__list {
-    margin-left: 16%;
-    margin-right: 16%;
-  }
+  // .advantages__list {
+  //   margin-left: 5px;
+  // }
 
   .advantages__item {
     width: 90%;
   }
 
   .advantages__icon {
-    &--flower {
-      left: 5%;
-    }
+    left: 0;
 
-    &--money {
-      left: 2%;
+    &--flower {
+      left: 10px;
     }
 
     &--heart {
-      left: 5%;
+      left: 8px;
+    }
+
+    &--gift {
+      left: 0;
+    }
+
+    &--rocket {
+      left: -8px;
     }
   }
 }
