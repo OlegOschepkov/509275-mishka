@@ -1,7 +1,4 @@
 .footer {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
   background-color: @lightgrey;
   padding: 0 10%;
 }
@@ -64,11 +61,7 @@
 
 @media (min-width: @tablet-width) {
   .footer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 25px 50px; //30 50
+    padding: 30px 6.5%;
   }
 
   .footer__logo {
@@ -81,6 +74,10 @@
     margin-left: 11%;
   }
 
+  .social__list {
+    padding: 30px 0 25px;
+  }
+
   .footer__copyright {
     margin: 0;
   }
@@ -88,8 +85,8 @@
 
 @media (min-width: @desktop-width) {
   .footer {
-    width: 1050px;
-    margin: 0 auto;
+    padding-left: 50px;
+    padding-right: 50px;
   }
 
   .footer__social {
