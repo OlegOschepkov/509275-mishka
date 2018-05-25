@@ -22,6 +22,7 @@ navToggle.addEventListener("click", function () {
 });
 
 
+
 var link = document.querySelectorAll(".modal--popup");
 var popup = document.querySelector(".modal");
 var close = popup.querySelector(".modal--close");
