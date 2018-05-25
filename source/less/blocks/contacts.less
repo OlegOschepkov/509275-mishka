@@ -1,0 +1,255 @@
+.contacts {
+  padding-top: 34px; //32 35
+  padding-bottom: 43px;
+}
+
+.contacts__title {
+  .font(18, 700, 30);
+  margin: 0 9% 5px;
+}
+
+.contacts__table {
+  margin: 0 9% 38px;
+}
+
+.contacts__row {
+  height: 80px;
+}
+
+.contacts__cell {
+  .font(15, 400, 30);
+
+  &--left {
+    width: 29%;
+  }
+
+  &--right {
+    width: 71%;
+  }
+
+  // &--adress {
+  //   padding-right: 40px;
+  // }
+  //
+  &--adress-text {
+    margin: 0;
+  }
+
+  &--second-left {
+    vertical-align: top;
+  }
+}
+
+.contacts__cell-mail {
+  color: black;
+  text-decoration: underline;
+  text-decoration-color: @teal;
+
+  &:hover {
+    color: @teal;
+  }
+
+  &:active {
+    color: @teal;
+    opacity: 0.3;
+  }
+}
+
+.contacts__map {
+  position: relative;
+  margin: 0 auto;
+  margin-bottom: 35px;
+  width: 320px;
+  background-image: url("/img/map-mobile@1x.jpg");
+  background-size: 320px 457px;
+  background-color: #e7e3db;
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("/img/map-mobile@2x.jpg");
+  }
+
+  iframe {
+    width: 320px;
+    height: 457px;
+    border: none;
+  }
+
+  // &::before {
+  //   display: block;
+  //   position: absolute;
+  //   width: 67px;
+  //   height: 100px;
+  //   top: 145px;
+  //   left: 140px;
+  //   content: "";
+  //   background-image: url("../img/icon-map-pin.svg");
+  //   z-index: 1;
+  // }
+}
+
+@media (min-width: @tablet-width) {
+  .contacts {
+    padding-bottom: 45px;
+    padding-top: 38px;
+  }
+
+  .contacts__title {
+    .font(43, 700, 50);
+    margin: 23px 6% 48px;
+  }
+
+  .contacts__table {
+    margin-left: 6.5%;
+    margin-right: 0;
+    margin-bottom: 68px;
+    width: 93.5%;
+  }
+
+  .contacts__body {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .contacts__row {
+    width: 46%;
+    // height: 62px;
+  }
+
+  .contacts__cell {
+    .font(17, 400, 30);
+
+    &--adress {
+      padding: 0;
+    }
+
+    &--left {
+      width: 26%;
+    }
+
+    &--right {
+      width: 72%;
+    }
+
+    &--adress-text {
+      padding-top: 1px;
+    }
+  }
+
+  .contacts__map {
+    position: relative;
+    margin: 0 auto;
+    margin-bottom: 50px; //35px
+    width: 768px;
+    background-image: url("/img/map-tablet@1x.jpg");
+    background-size: 768px 457px;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("/img/map-tablet@2x.jpg");
+    }
+
+    iframe {
+      width: 768px;
+      height: 457px;
+    }
+
+    &::before {
+      top: 30%;
+      left: 47%;
+    }
+
+    &::after {
+      display: block;
+      position: absolute;
+      content: "";
+      height: 81px;
+      width: 47px;
+      background-image: url("../img/icon-flag.svg");
+      .background();
+      left: 87%;
+      top: -258px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .contacts {
+    padding-top: 110px; //120
+    padding-bottom: 90px;
+
+    .container {
+      width: 710px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      position: relative;
+    }
+  }
+
+  .contacts__cell--left {
+    width: 25%;
+  }
+
+  .contacts__title {
+    width: 320px;
+    margin-left: 0;
+    margin-bottom: 48px; //47
+    margin-top: 30px; //25
+    .font(53, 700, 57);
+  }
+
+  .contacts__table {
+    margin-left: 5px;
+    margin-bottom: 97px;
+    width: 320px;
+  }
+
+  .contacts__body {
+    flex-direction: column;
+    width: 320px;
+  }
+
+  .contacts__cell-mail {
+    padding-left: 3px;
+  }
+
+  .contacts__row {
+    height: 62px;
+    width: auto;
+  }
+
+  .contacts__row--second {
+    margin: 0;
+  }
+
+  .contacts__map {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    left: 355px;
+    top: -40px;
+    width: auto;
+    background-image: url("/img/map-desktop@1x.jpg");
+    background-size: 525px 457px;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("/img/map-desktop@2x.jpg");
+    }
+
+    iframe {
+      width: 525px;
+      height: 457px;
+    }
+
+    &::after {
+      left: -88%;
+      top: 65px;
+    }
+
+    &::before {
+      top: 32%;
+      left: 240px;
+    }
+  }
+}
