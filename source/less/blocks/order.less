@@ -5,7 +5,7 @@
 .order__form-block {
   margin: 0;
   padding: 0;
-  margin-top: 11px;
+  margin-top: 10px;
   border: none;
   border-top: 1px solid @teal;
   position: relative;
@@ -27,7 +27,7 @@
   margin-right: 200px;
   color: @teal;
   .font(17, 700, 16);
-  padding-right: 25px;
+  padding-right: 3px;
   text-transform: uppercase;
   background-color: white;
 }
@@ -155,7 +155,7 @@
 .order__customer-icon {
   position: absolute;
   left: 86.5%;
-  top: 34px;
+  top: 25px;
   opacity: 0.2;
 }
 
@@ -204,6 +204,8 @@
 
 
   .order__title-text {
+    margin: 0;
+    padding: 0;
     margin-bottom: 10px;
   }
 
@@ -220,6 +222,7 @@
     border: none;
     padding-left: 28%;
     padding-right: 6%;
+    margin: 0;
 
     &--grey {
       background-color: @lightgrey;
@@ -233,21 +236,32 @@
   .order__legend {
     position: absolute;
     left: 6.5%;
-    top: 68px;
+    top: 52px;
     max-width: 150px;
+    padding: 0;
+    margin: 0;
 
     &--email {
-      top: 26px;
+      top: 25px;
       background-color: @lightgrey;
     }
 
     &--color {
-      top: 52px;
+      top: 67px;
       background-color: @lightgrey;
+    }
+
+    &--customer {
+      top: 67px;
     }
 
     &--phone {
       background-color: @lightgrey;
+      top: 69px;
+    }
+
+    &--textarea {
+      top: 67px;
     }
   }
 
@@ -304,6 +318,8 @@
     flex-grow: 1;
     .font(19, 400, 18);
     padding-left: 4%;
+    background-color: transparent;
+
 
     &--email {
       width: 95%;
@@ -322,7 +338,7 @@
   .order__customer-icon {
     &--phone {
       top: 63px;
-      left: 666px;
+      left: 86.5%;
     }
 
     &--email {
@@ -348,8 +364,8 @@
 @media (min-width: @desktop-width) {
   .order {
     .container {
-      width: auto;
-      margin: 0 auto;
+      width: 100%;
+      // margin: 0 auto;
     }
   }
 
@@ -357,6 +373,8 @@
     .font(53, 700, 57);
     min-height: 265px;
     margin: 0;
+    width: 100%;
+    text-align: center;
   }
 
   .order__title-text {
@@ -367,6 +385,7 @@
   .order__form-block {
     padding-left: 0;
     padding-right: 0;
+    margin: 0;
 
     .container {
       position: relative;
